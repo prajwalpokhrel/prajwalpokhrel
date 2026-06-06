@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>5 React Performance Patterns Every Developer Should Know | Prajwal Pokhrel</title>
+    <meta name="description"
+        content="Five practical React performance patterns: memoization, lazy loading, virtualization, state colocation, and avoiding unnecessary re-renders." />
+    <meta name="author" content="Prajwal Pokhrel" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://prajwal10.com.np/blog/react-performance-tips/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://prajwal10.com.np/blog/react-performance-tips/" />
+    <meta property="og:title" content="5 React Performance Patterns Every Developer Should Know" />
+    <meta property="og:description"
+        content="Practical React performance techniques that keep apps snappy at scale." />
+    <meta property="og:image" content="https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg" />
+    <meta property="article:published_time" content="2026-05-28" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5 React Performance Patterns Every Developer Should Know" />
+    <meta name="twitter:image" content="https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../../tailwind-config.js"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Syne:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "5 React Performance Patterns Every Developer Should Know",
+        "description": "Five practical React performance patterns for production apps.",
+        "image": "https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg",
+        "datePublished": "2026-05-28",
+        "dateModified": "2026-05-28",
+        "author": { "@type": "Person", "name": "Prajwal Pokhrel", "url": "https://prajwal10.com.np/" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://prajwal10.com.np/blog/react-performance-tips/" },
+        "keywords": ["React", "Performance", "JavaScript", "Web Development", "Optimization"]
+    }
+    </script>
+</head>
+
+<body class="font-body-md text-body-md relative">
+    <div class="particle-bg" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
+        <div class="ambient-orb ambient-orb-3"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <nav
+        class="fixed top-3 md:top-4 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] sm:w-[90%] rounded-full border border-primary/20 backdrop-blur-xl bg-surface/10 z-50 flex justify-between items-center px-3 sm:px-4 md:px-8 py-2.5 md:py-3 max-w-container-max shadow-[0_0_20px_rgba(139,213,185,0.1)] cubic-transition">
+        <a href="../../index.html"
+            class="font-headline-lg-mobile md:text-headline-md font-bold text-primary truncate min-w-0 text-sm sm:text-base hover:opacity-80 cubic-transition">PrajwalPokhrel</a>
+        <div class="hidden md:flex gap-5 lg:gap-8 items-center">
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="../../index.html#me">Me</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="../../index.html#experience">Experience</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="../../index.html#projects">Projects</a>
+            <a class="nav-link text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-primary pb-1"
+                href="../../blogs.html">Blogs</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="../../index.html#contact"
+                class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300">Let's
+                Talk</a>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface-variant hover:text-primary"
+                aria-label="Open menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 md:hidden px-6">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-on-surface-variant hover:text-primary"
+            aria-label="Close menu">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md" href="../../index.html#me"
+            onclick="closeMobileMenu()">Me</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md"
+            href="../../index.html#experience" onclick="closeMobileMenu()">Experience</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md" href="../../index.html#projects"
+            onclick="closeMobileMenu()">Projects</a>
+        <a class="nav-link text-primary font-headline-md" href="../../blogs.html" onclick="closeMobileMenu()">Blogs</a>
+        <a href="../../index.html#contact" onclick="closeMobileMenu()"
+            class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md">Let's Talk</a>
+    </div>
+
+    <main class="relative z-10">
+        <article class="pt-28 md:pt-36 pb-section-gap-mobile md:pb-section-gap-desktop">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 md:px-gutter">
+                <a href="../../blogs.html"
+                    class="inline-flex items-center gap-1 text-primary font-label-md text-label-md mb-8 hover:gap-2 cubic-transition">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span> All blogs
+                </a>
+
+                <header class="space-y-4 mb-8">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <span class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">REACT</span>
+                        <time class="font-code-sm text-code-sm text-outline" datetime="2026-05-28">May 28, 2026</time>
+                        <span class="font-code-sm text-code-sm text-outline">· 5 min read</span>
+                    </div>
+                    <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight">5 React
+                        Performance Patterns Every Developer Should Know</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">Performance isn't premature optimization
+                        — it's user trust. These five patterns solve the re-render problems that show up in every growing
+                        React codebase.</p>
+                </header>
+
+                <div class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
+                    <img src="react-performance-patterns-guide.jpg" alt="React performance optimization with component rendering diagram"
+                        class="w-full h-full object-cover" width="1200" height="675" />
+                </div>
+
+                <div class="blog-content">
+                    <p>React's declarative model makes building UIs fast — until a dashboard with filters, tables, and
+                        charts starts stuttering on mid-range laptops. The fix usually isn't rewriting in another
+                        framework. It's applying a handful of patterns consistently.</p>
+
+                    <h2>1. Colocate State Where It's Used</h2>
+                    <p>Lifting state to the root feels convenient early on, but it forces unrelated branches to
+                        re-render. Keep state as close as possible to the components that consume it. If only a sidebar
+                        filter needs <code>searchQuery</code>, don't store it in a global context used by the entire app.</p>
+
+                    <h2>2. Memoize Expensive Computations with useMemo</h2>
+                    <p>Deriving sorted lists, grouped data, or chart series on every render adds up. Wrap heavy
+                        derivations in <code>useMemo</code> so they only recompute when dependencies change — not when an
+                        unrelated modal opens.</p>
+
+                    <h2>3. Stabilize Callbacks with useCallback</h2>
+                    <p>Child components wrapped in <code>React.memo</code> still re-render when parents pass fresh inline
+                        functions each render. <code>useCallback</code> preserves referential equality for handlers
+                        passed deep into list items or memoized children.</p>
+
+                    <h2>4. Code-Split Routes with React.lazy</h2>
+                    <p>Users shouldn't download your admin panel to view a landing page. Split routes at the page level:</p>
+                    <pre><code>const Dashboard = React.lazy(() =&gt; import('./Dashboard'));
+
+function App() {
+  return (
+    &lt;Suspense fallback={&lt;Spinner /&gt;}&gt;
+      &lt;Routes&gt;...&lt;/Routes&gt;
+    &lt;/Suspense&gt;
+  );
+}</code></pre>
+
+                    <h2>5. Virtualize Long Lists</h2>
+                    <p>Rendering 5,000 table rows DOM nodes will choke any browser. Libraries like
+                        <code>@tanstack/react-virtual</code> or <code>react-window</code> render only what's visible,
+                        keeping scroll performance smooth for transaction histories and activity feeds.</p>
+
+                    <h2>Measure Before You Optimize</h2>
+                    <p>React DevTools Profiler and the browser Performance tab tell you what's actually slow. Avoid
+                        sprinkling <code>memo</code> everywhere — it has a cost too. Profile first, then apply the
+                        pattern that matches the bottleneck.</p>
+
+                    <h2>Takeaway</h2>
+                    <p>Great React performance is mostly discipline: local state, intentional memoization, lazy routes,
+                        and virtualized lists. Master these five and your apps will feel instant long before you need
+                        exotic optimizations.</p>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-outline-variant">
+                    <p class="text-on-surface-variant mb-4">Written by <a href="../../index.html"
+                            class="text-primary hover:underline">Prajwal Pokhrel</a></p>
+                    <a href="../../blogs.html"
+                        class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition">
+                        <span class="material-symbols-outlined">arrow_back</span> Back to all blogs
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="relative z-10 w-full border-t border-outline-variant bg-surface/80 backdrop-blur-sm">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4 py-8 px-4 md:px-gutter max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md text-primary">PrajwalPokhrel</div>
+            <div class="text-on-surface-variant text-center order-last md:order-none">© 2026 PrajwalPokhrel</div>
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+                <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../blogs.html">Blogs</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../particles.js" defer></script>
+    <script src="../../script.js" defer></script>
+</body>
+
+</html>

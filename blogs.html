@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blogs | Prajwal Pokhrel — Web &amp; Mobile Developer</title>
+    <meta name="description"
+        content="Tech articles on Flutter MVVM, React performance, and Next.js by Prajwal Pokhrel. Practical guides for web and mobile developers." />
+    <meta name="author" content="Prajwal Pokhrel" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#101412" />
+    <link rel="canonical" href="https://prajwal10.com.np/blogs.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prajwal10.com.np/blogs.html" />
+    <meta property="og:title" content="Blogs | Prajwal Pokhrel" />
+    <meta property="og:description"
+        content="Tech articles on Flutter, React, and Next.js by web &amp; mobile developer Prajwal Pokhrel." />
+    <meta property="og:image" content="https://prajwal10.com.np/prajwal-pokhrel.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Prajwal Pokhrel Portfolio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blogs | Prajwal Pokhrel" />
+    <meta name="twitter:description"
+        content="Tech articles on Flutter, React, and Next.js by web &amp; mobile developer Prajwal Pokhrel." />
+    <meta name="twitter:image" content="https://prajwal10.com.np/prajwal-pokhrel.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Syne:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Prajwal Pokhrel Tech Blog",
+        "description": "Articles on Flutter, React, Next.js, and mobile development.",
+        "url": "https://prajwal10.com.np/blogs.html",
+        "author": {
+            "@type": "Person",
+            "name": "Prajwal Pokhrel",
+            "url": "https://prajwal10.com.np/"
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Why Flutter MVVM Scales for Fintech Apps",
+                "url": "https://prajwal10.com.np/blog/flutter-mvvm-architecture/",
+                "datePublished": "2026-05-12"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "5 React Performance Patterns Every Developer Should Know",
+                "url": "https://prajwal10.com.np/blog/react-performance-tips/",
+                "datePublished": "2026-05-28"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Getting Started with the Next.js App Router",
+                "url": "https://prajwal10.com.np/blog/nextjs-app-router-basics/",
+                "datePublished": "2026-06-02"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body class="font-body-md text-body-md relative">
+    <div class="particle-bg" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
+        <div class="ambient-orb ambient-orb-3"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <nav
+        class="fixed top-3 md:top-4 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] sm:w-[90%] rounded-full border border-primary/20 backdrop-blur-xl bg-surface/10 z-50 flex justify-between items-center px-3 sm:px-4 md:px-8 py-2.5 md:py-3 max-w-container-max shadow-[0_0_20px_rgba(139,213,185,0.1)] cubic-transition">
+        <a href="index.html"
+            class="font-headline-lg-mobile md:text-headline-md font-bold text-primary truncate min-w-0 text-sm sm:text-base hover:opacity-80 cubic-transition">PrajwalPokhrel</a>
+        <div class="hidden md:flex gap-5 lg:gap-8 items-center">
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="index.html#me">Me</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="index.html#experience">Experience</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="index.html#projects">Projects</a>
+            <a class="nav-link text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-primary pb-1"
+                href="blogs.html">Blogs</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="index.html#contact"
+                class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300">Let's
+                Talk</a>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface-variant hover:text-primary"
+                aria-label="Open menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 md:hidden px-6">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-on-surface-variant hover:text-primary"
+            aria-label="Close menu">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="index.html#me" onclick="closeMobileMenu()">Me</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="index.html#experience" onclick="closeMobileMenu()">Experience</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="index.html#projects" onclick="closeMobileMenu()">Projects</a>
+        <a class="nav-link text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+        <a href="index.html#contact" onclick="closeMobileMenu()"
+            class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300">Let's
+            Talk</a>
+    </div>
+
+    <main class="relative z-10">
+        <section class="pt-28 md:pt-36 pb-section-gap-mobile md:pb-section-gap-desktop">
+            <div class="max-w-container-max mx-auto px-4 sm:px-6 md:px-gutter">
+                <div class="mb-12 md:mb-16 space-y-4">
+                    <span
+                        class="font-label-md text-label-md text-primary bg-primary/10 px-4 py-1 rounded-full border border-primary/20 inline-block">TECH
+                        WRITING</span>
+                    <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Developer <span
+                            class="text-primary">Blogs</span></h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Notes on Flutter, React, Next.js, and building production-ready apps — from a web &amp; mobile
+                        developer in Nepal.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-gutter">
+                    <article class="blog-card glass-card rounded-xl overflow-hidden group">
+                        <a href="blog/flutter-mvvm-architecture/" class="block">
+                            <div class="aspect-[16/10] overflow-hidden blog-cover-placeholder">
+                                <img src="blog/flutter-mvvm-architecture/flutter-mvvm-fintech-architecture.jpg"
+                                    alt="Flutter MVVM architecture diagram for fintech mobile apps"
+                                    class="w-full h-full object-cover cubic-transition group-hover:scale-105"
+                                    loading="lazy" decoding="async"
+                                    onerror="this.style.display='none'" />
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="font-label-md text-label-md text-primary">FLUTTER</span>
+                                    <time class="font-code-sm text-code-sm text-outline" datetime="2026-05-12">May 12,
+                                        2026</time>
+                                </div>
+                                <h2 class="font-headline-md text-headline-md group-hover:text-primary cubic-transition">
+                                    Why Flutter MVVM Scales for Fintech Apps</h2>
+                                <p class="text-on-surface-variant text-sm sm:text-base">How separating UI from business
+                                    logic keeps complex financial apps testable, maintainable, and fast to iterate on.
+                                </p>
+                                <span
+                                    class="inline-flex items-center gap-1 text-primary font-label-md text-label-md pt-2">
+                                    Read article <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card glass-card rounded-xl overflow-hidden group">
+                        <a href="blog/react-performance-tips/" class="block">
+                            <div class="aspect-[16/10] overflow-hidden blog-cover-placeholder">
+                                <img src="blog/react-performance-tips/react-performance-patterns-guide.jpg"
+                                    alt="React performance optimization concepts illustration"
+                                    class="w-full h-full object-cover cubic-transition group-hover:scale-105"
+                                    loading="lazy" decoding="async"
+                                    onerror="this.style.display='none'" />
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="font-label-md text-label-md text-primary">REACT</span>
+                                    <time class="font-code-sm text-code-sm text-outline" datetime="2026-05-28">May 28,
+                                        2026</time>
+                                </div>
+                                <h2 class="font-headline-md text-headline-md group-hover:text-primary cubic-transition">
+                                    5 React Performance Patterns Every Developer Should Know</h2>
+                                <p class="text-on-surface-variant text-sm sm:text-base">Practical techniques — memoization,
+                                    lazy loading, and list virtualization — that keep React apps snappy at scale.</p>
+                                <span
+                                    class="inline-flex items-center gap-1 text-primary font-label-md text-label-md pt-2">
+                                    Read article <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card glass-card rounded-xl overflow-hidden group md:col-span-2 lg:col-span-1">
+                        <a href="blog/nextjs-app-router-basics/" class="block">
+                            <div class="aspect-[16/10] overflow-hidden blog-cover-placeholder">
+                                <img src="blog/nextjs-app-router-basics/nextjs-app-router-server-components.jpg"
+                                    alt="Next.js App Router file structure and server components"
+                                    class="w-full h-full object-cover cubic-transition group-hover:scale-105"
+                                    loading="lazy" decoding="async"
+                                    onerror="this.style.display='none'" />
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="font-label-md text-label-md text-primary">NEXT.JS</span>
+                                    <time class="font-code-sm text-code-sm text-outline" datetime="2026-06-02">Jun 2,
+                                        2026</time>
+                                </div>
+                                <h2 class="font-headline-md text-headline-md group-hover:text-primary cubic-transition">
+                                    Getting Started with the Next.js App Router</h2>
+                                <p class="text-on-surface-variant text-sm sm:text-base">A beginner-friendly walkthrough of
+                                    layouts, server components, and routing in the modern Next.js paradigm.</p>
+                                <span
+                                    class="inline-flex items-center gap-1 text-primary font-label-md text-label-md pt-2">
+                                    Read article <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="relative z-10 w-full border-t border-outline-variant bg-surface/80 backdrop-blur-sm">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4 py-8 md:py-gutter px-4 md:px-gutter max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md text-primary">PrajwalPokhrel</div>
+            <div class="text-on-surface-variant font-body-md text-body-md text-center order-last md:order-none">
+                © 2026 PrajwalPokhrel. Built with precision.
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="https://github.com/Prajjwall123" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="https://www.youtube.com/@suntzu59" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="mailto:pokhrelprajwal29@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="particles.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

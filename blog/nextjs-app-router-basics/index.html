@@ -16,12 +16,14 @@
     <meta property="og:title" content="Getting Started with the Next.js App Router" />
     <meta property="og:description"
         content="Learn layouts, server components, and routing in the modern Next.js paradigm." />
-    <meta property="og:image" content="https://prajwal10.com.np/blog/nextjs-app-router-basics/nextjs-app-router-server-components.jpg" />
+    <meta property="og:image"
+        content="https://prajwal10.com.np/blog/nextjs-app-router-basics/nextjs-app-router-server-components.jpg" />
     <meta property="article:published_time" content="2026-06-02" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Getting Started with the Next.js App Router" />
-    <meta name="twitter:image" content="https://prajwal10.com.np/blog/nextjs-app-router-basics/nextjs-app-router-server-components.jpg" />
+    <meta name="twitter:image"
+        content="https://prajwal10.com.np/blog/nextjs-app-router-basics/nextjs-app-router-server-components.jpg" />
 
     <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,18 +113,22 @@
 
                 <header class="space-y-4 mb-8">
                     <div class="flex flex-wrap items-center gap-3">
-                        <span class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">NEXT.JS</span>
+                        <span
+                            class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">NEXT.JS</span>
                         <time class="font-code-sm text-code-sm text-outline" datetime="2026-06-02">Jun 2, 2026</time>
                         <span class="font-code-sm text-code-sm text-outline">· 7 min read</span>
                     </div>
                     <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight">Getting
                         Started with the Next.js App Router</h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">The App Router is the default in modern
-                        Next.js projects. Here's how file-based routing, layouts, and server components fit together.</p>
+                        Next.js projects. Here's how file-based routing, layouts, and server components fit together.
+                    </p>
                 </header>
 
-                <div class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
-                    <img src="nextjs-app-router-server-components.jpg" alt="Next.js App Router folder structure with app directory and layouts"
+                <div
+                    class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
+                    <img src="nextjs-app-router-server-components.jpg"
+                        alt="Next.js App Router folder structure with app directory and layouts"
                         class="w-full h-full object-cover" width="1200" height="675" />
                 </div>
 
@@ -134,7 +140,8 @@
                     <h2>The <code>app/</code> Directory</h2>
                     <p>Every folder inside <code>app/</code> defines a route segment. A file named <code>page.tsx</code>
                         makes that segment publicly accessible. Special files like <code>layout.tsx</code>,
-                        <code>loading.tsx</code>, and <code>error.tsx</code> colocate concerns per route.</p>
+                        <code>loading.tsx</code>, and <code>error.tsx</code> colocate concerns per route.
+                    </p>
 
                     <pre><code>app/
   layout.tsx      # Root layout (html, body, nav)
@@ -152,7 +159,8 @@
                     <h2>Server Components by Default</h2>
                     <p>Components in the App Router are React Server Components unless marked with
                         <code>"use client"</code>. That means you can fetch data directly in a page without
-                        <code>useEffect</code>:</p>
+                        <code>useEffect</code>:
+                    </p>
 
                     <pre><code>// app/projects/page.tsx — Server Component
 export default async function ProjectsPage() {
@@ -183,7 +191,8 @@ export default async function ProjectsPage() {
 
                     <h2>Wrapping Up</h2>
                     <p>The App Router rewards a server-first mindset: colocated routes, nested layouts, and selective
-                        client components. Start your next project with <code>create-next-app</code>, explore one dynamic
+                        client components. Start your next project with <code>create-next-app</code>, explore one
+                        dynamic
                         route, and build from there — the patterns scale cleanly to production apps.</p>
                 </div>
 
@@ -206,13 +215,15 @@ export default async function ProjectsPage() {
             <div class="text-on-surface-variant text-center order-last md:order-none">© 2026 PrajwalPokhrel</div>
             <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
                 <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../blogs.html">Blogs</a>
-                <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../index.html#contact">Contact</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-md"
+                    href="../../index.html#contact">Contact</a>
             </div>
         </div>
     </footer>
 
     <script src="../../particles.js" defer></script>
     <script src="../../script.js" defer></script>
+    <script src="../../blog-enhance.js" defer></script>
 </body>
 
 </html>

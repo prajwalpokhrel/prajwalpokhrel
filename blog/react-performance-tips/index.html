@@ -14,14 +14,15 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://prajwal10.com.np/blog/react-performance-tips/" />
     <meta property="og:title" content="5 React Performance Patterns Every Developer Should Know" />
-    <meta property="og:description"
-        content="Practical React performance techniques that keep apps snappy at scale." />
-    <meta property="og:image" content="https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg" />
+    <meta property="og:description" content="Practical React performance techniques that keep apps snappy at scale." />
+    <meta property="og:image"
+        content="https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg" />
     <meta property="article:published_time" content="2026-05-28" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="5 React Performance Patterns Every Developer Should Know" />
-    <meta name="twitter:image" content="https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg" />
+    <meta name="twitter:image"
+        content="https://prajwal10.com.np/blog/react-performance-tips/react-performance-patterns-guide.jpg" />
 
     <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,19 +112,24 @@
 
                 <header class="space-y-4 mb-8">
                     <div class="flex flex-wrap items-center gap-3">
-                        <span class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">REACT</span>
+                        <span
+                            class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">REACT</span>
                         <time class="font-code-sm text-code-sm text-outline" datetime="2026-05-28">May 28, 2026</time>
                         <span class="font-code-sm text-code-sm text-outline">· 5 min read</span>
                     </div>
                     <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg leading-tight">5 React
                         Performance Patterns Every Developer Should Know</h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">Performance isn't premature optimization
-                        — it's user trust. These five patterns solve the re-render problems that show up in every growing
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">Performance isn't premature
+                        optimization
+                        — it's user trust. These five patterns solve the re-render problems that show up in every
+                        growing
                         React codebase.</p>
                 </header>
 
-                <div class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
-                    <img src="react-performance-patterns-guide.jpg" alt="React performance optimization with component rendering diagram"
+                <div
+                    class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
+                    <img src="react-performance-patterns-guide.jpg"
+                        alt="React performance optimization with component rendering diagram"
                         class="w-full h-full object-cover" width="1200" height="675" />
                 </div>
 
@@ -135,20 +141,24 @@
                     <h2>1. Colocate State Where It's Used</h2>
                     <p>Lifting state to the root feels convenient early on, but it forces unrelated branches to
                         re-render. Keep state as close as possible to the components that consume it. If only a sidebar
-                        filter needs <code>searchQuery</code>, don't store it in a global context used by the entire app.</p>
+                        filter needs <code>searchQuery</code>, don't store it in a global context used by the entire
+                        app.</p>
 
                     <h2>2. Memoize Expensive Computations with useMemo</h2>
                     <p>Deriving sorted lists, grouped data, or chart series on every render adds up. Wrap heavy
-                        derivations in <code>useMemo</code> so they only recompute when dependencies change — not when an
+                        derivations in <code>useMemo</code> so they only recompute when dependencies change — not when
+                        an
                         unrelated modal opens.</p>
 
                     <h2>3. Stabilize Callbacks with useCallback</h2>
-                    <p>Child components wrapped in <code>React.memo</code> still re-render when parents pass fresh inline
+                    <p>Child components wrapped in <code>React.memo</code> still re-render when parents pass fresh
+                        inline
                         functions each render. <code>useCallback</code> preserves referential equality for handlers
                         passed deep into list items or memoized children.</p>
 
                     <h2>4. Code-Split Routes with React.lazy</h2>
-                    <p>Users shouldn't download your admin panel to view a landing page. Split routes at the page level:</p>
+                    <p>Users shouldn't download your admin panel to view a landing page. Split routes at the page level:
+                    </p>
                     <pre><code>const Dashboard = React.lazy(() =&gt; import('./Dashboard'));
 
 function App() {
@@ -162,7 +172,8 @@ function App() {
                     <h2>5. Virtualize Long Lists</h2>
                     <p>Rendering 5,000 table rows DOM nodes will choke any browser. Libraries like
                         <code>@tanstack/react-virtual</code> or <code>react-window</code> render only what's visible,
-                        keeping scroll performance smooth for transaction histories and activity feeds.</p>
+                        keeping scroll performance smooth for transaction histories and activity feeds.
+                    </p>
 
                     <h2>Measure Before You Optimize</h2>
                     <p>React DevTools Profiler and the browser Performance tab tell you what's actually slow. Avoid
@@ -194,13 +205,15 @@ function App() {
             <div class="text-on-surface-variant text-center order-last md:order-none">© 2026 PrajwalPokhrel</div>
             <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
                 <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../blogs.html">Blogs</a>
-                <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../index.html#contact">Contact</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-md"
+                    href="../../index.html#contact">Contact</a>
             </div>
         </div>
     </footer>
 
     <script src="../../particles.js" defer></script>
     <script src="../../script.js" defer></script>
+    <script src="../../blog-enhance.js" defer></script>
 </body>
 
 </html>

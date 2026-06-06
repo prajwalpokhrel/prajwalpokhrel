@@ -16,7 +16,8 @@
     <meta property="og:title" content="Why Flutter MVVM Scales for Fintech Apps" />
     <meta property="og:description"
         content="How separating UI from business logic keeps complex financial apps testable and maintainable." />
-    <meta property="og:image" content="https://prajwal10.com.np/blog/flutter-mvvm-architecture/flutter-mvvm-fintech-architecture.jpg" />
+    <meta property="og:image"
+        content="https://prajwal10.com.np/blog/flutter-mvvm-architecture/flutter-mvvm-fintech-architecture.jpg" />
     <meta property="article:published_time" content="2026-05-12" />
     <meta property="article:author" content="Prajwal Pokhrel" />
 
@@ -24,7 +25,8 @@
     <meta name="twitter:title" content="Why Flutter MVVM Scales for Fintech Apps" />
     <meta name="twitter:description"
         content="How separating UI from business logic keeps complex financial apps testable and maintainable." />
-    <meta name="twitter:image" content="https://prajwal10.com.np/blog/flutter-mvvm-architecture/flutter-mvvm-fintech-architecture.jpg" />
+    <meta name="twitter:image"
+        content="https://prajwal10.com.np/blog/flutter-mvvm-architecture/flutter-mvvm-fintech-architecture.jpg" />
 
     <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -126,7 +128,8 @@
 
                 <header class="space-y-4 mb-8">
                     <div class="flex flex-wrap items-center gap-3">
-                        <span class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">FLUTTER</span>
+                        <span
+                            class="font-label-md text-label-md text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">FLUTTER</span>
                         <time class="font-code-sm text-code-sm text-outline" datetime="2026-05-12">May 12, 2026</time>
                         <span class="font-code-sm text-code-sm text-outline">· 6 min read</span>
                     </div>
@@ -137,8 +140,10 @@
                         developer experience.</p>
                 </header>
 
-                <div class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
-                    <img src="flutter-mvvm-fintech-architecture.jpg" alt="Flutter MVVM architecture layers for fintech mobile development"
+                <div
+                    class="rounded-xl overflow-hidden border border-primary/20 mb-10 aspect-[16/9] blog-cover-placeholder">
+                    <img src="flutter-mvvm-fintech-architecture.jpg"
+                        alt="Flutter MVVM architecture layers for fintech mobile development"
                         class="w-full h-full object-cover" width="1200" height="675" />
                 </div>
 
@@ -152,8 +157,10 @@
                     <p>In the Model-View-ViewModel pattern, each screen typically maps to three responsibilities:</p>
                     <ul>
                         <li><strong>View</strong> — Widgets that render UI and forward user gestures.</li>
-                        <li><strong>ViewModel</strong> — Holds presentation state, exposes commands, and talks to repositories.</li>
-                        <li><strong>Model / Repository</strong> — Data sources, DTOs, and business rules close to the domain.</li>
+                        <li><strong>ViewModel</strong> — Holds presentation state, exposes commands, and talks to
+                            repositories.</li>
+                        <li><strong>Model / Repository</strong> — Data sources, DTOs, and business rules close to the
+                            domain.</li>
                     </ul>
 
                     <p>The ViewModel never imports Flutter widgets. That single constraint makes your core logic
@@ -162,7 +169,8 @@
 
                     <h2>Why Fintech Teams Reach for MVVM</h2>
                     <h3>1. Testability under regulatory pressure</h3>
-                    <p>Financial products need reproducible behavior. ViewModels let you test state transitions — loading,
+                    <p>Financial products need reproducible behavior. ViewModels let you test state transitions —
+                        loading,
                         success, insufficient funds, session expiry — as plain Dart tests with mocked repositories.</p>
 
                     <h3>2. Parallel work across squads</h3>
@@ -171,7 +179,8 @@
 
                     <h3>3. Predictable state for complex flows</h3>
                     <p>Multi-step onboarding, OTP verification, and document uploads are easier to reason about when
-                        each step's state lives in a dedicated ViewModel rather than scattered across StatefulWidgets.</p>
+                        each step's state lives in a dedicated ViewModel rather than scattered across StatefulWidgets.
+                    </p>
 
                     <h2>A Minimal ViewModel Shape</h2>
                     <pre><code>class TransferViewModel extends ChangeNotifier {
@@ -199,13 +208,15 @@
                     <h2>Common Pitfalls to Avoid</h2>
                     <ul>
                         <li>Letting API response models leak directly into widgets.</li>
-                        <li>Putting navigation side-effects inside repositories instead of the ViewModel or coordinator.</li>
+                        <li>Putting navigation side-effects inside repositories instead of the ViewModel or coordinator.
+                        </li>
                         <li>Creating god ViewModels that own an entire user journey — split by feature.</li>
                     </ul>
 
                     <h2>Bottom Line</h2>
                     <p>Flutter MVVM isn't ceremony for its own sake. In fintech, it's insurance: your team can ship
-                        faster, test deeper, and refactor with confidence as compliance requirements grow. Start with one
+                        faster, test deeper, and refactor with confidence as compliance requirements grow. Start with
+                        one
                         high-risk flow — payments or auth — and expand the pattern from there.</p>
                 </div>
 
@@ -228,13 +239,15 @@
             <div class="text-on-surface-variant text-center order-last md:order-none">© 2026 PrajwalPokhrel</div>
             <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
                 <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../blogs.html">Blogs</a>
-                <a class="text-on-surface-variant hover:text-primary font-label-md" href="../../index.html#contact">Contact</a>
+                <a class="text-on-surface-variant hover:text-primary font-label-md"
+                    href="../../index.html#contact">Contact</a>
             </div>
         </div>
     </footer>
 
     <script src="../../particles.js" defer></script>
     <script src="../../script.js" defer></script>
+    <script src="../../blog-enhance.js" defer></script>
 </body>
 
 </html>

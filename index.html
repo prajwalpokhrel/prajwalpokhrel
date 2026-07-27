@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html class="dark" lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -8,7 +10,7 @@
         content="Prajwal Pokhrel is a Web &amp; Mobile Developer in Nepal specializing in Flutter, React, Next.js, and full-stack apps. View fintech, marketplace, and platform projects." />
     <meta name="author" content="Prajwal Pokhrel" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#101412" />
     <link rel="canonical" href="https://prajwal10.com.np/" />
 
     <meta property="og:type" content="website" />
@@ -32,206 +34,430 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Syne:wght@600;700;800&amp;display=swap"
         rel="stylesheet" />
-    <script src="tailwind-config.js?v=5"></script>
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://prajwal10.com.np/#website",
+                "url": "https://prajwal10.com.np/",
+                "name": "Prajwal Pokhrel Portfolio",
+                "description": "Portfolio of Prajwal Pokhrel, Web & Mobile Developer specializing in Flutter, React, and Next.js.",
+                "inLanguage": "en"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://prajwal10.com.np/#person",
+                "name": "Prajwal Pokhrel",
+                "alternateName": "PrajwalPokhrel",
+                "url": "https://prajwal10.com.np/",
+                "image": "https://prajwal10.com.np/prajwal-pokhrel.jpg",
+                "jobTitle": "Web & Mobile Developer",
+                "description": "Web and mobile developer building high performance apps with Flutter, React, Next.js, and Node.js.",
+                "email": "hello@prajwal10.com.np",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "NP"
+                },
+                "knowsAbout": [
+                    "Flutter",
+                    "React",
+                    "Next.js",
+                    "Mobile Development",
+                    "Web Development",
+                    "Node.js",
+                    "Kotlin"
+                ],
+                "sameAs": [
+                    "https://github.com/Prajjwall123",
+                    "https://www.linkedin.com/in/prajwal-pokhrel-618863280/",
+                    "https://www.youtube.com/@suntzu59"
+                ]
+            },
+            {
+                "@type": "ProfilePage",
+                "@id": "https://prajwal10.com.np/#profilepage",
+                "url": "https://prajwal10.com.np/",
+                "name": "Prajwal Pokhrel | Web & Mobile Developer Portfolio",
+                "isPartOf": { "@id": "https://prajwal10.com.np/#website" },
+                "about": { "@id": "https://prajwal10.com.np/#person" },
+                "inLanguage": "en"
+            }
+        ]
+    }
+    </script>
 </head>
-<body class="bg-[#050505] text-[#f5f5f5] antialiased selection:bg-white selection:text-black min-h-screen flex flex-col">
 
-    <!-- Minimalist Navbar -->
-    <nav class="w-full px-6 py-6 flex justify-between items-center brutalist-border-b bg-[#050505] sticky top-0 z-50">
-        <div class="font-display font-bold text-xl md:text-2xl tracking-tighter uppercase text-white">Prajwal Pokhrel</div>
-        <div class="hidden sm:flex gap-8 font-mono text-xs md:text-sm uppercase tracking-widest text-[#888]">
-            <a href="#work" class="hover:text-white transition-colors">Work</a>
-            <a href="#about" class="hover:text-white transition-colors">About</a>
-            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+<body class="font-body-md text-body-md relative">
+    <div class="particle-bg" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
+        <div class="ambient-orb ambient-orb-3"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+    <nav
+        class="fixed top-3 md:top-4 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] sm:w-[90%] rounded-full border border-primary/20 backdrop-blur-xl bg-surface/10 z-50 flex justify-between items-center px-3 sm:px-4 md:px-8 py-2.5 md:py-3 max-w-container-max shadow-[0_0_20px_rgba(139,213,185,0.1)] cubic-transition">
+        <a href="index.html"
+            class="font-headline-lg-mobile md:text-headline-md font-bold text-primary truncate min-w-0 text-sm sm:text-base hover:opacity-80 cubic-transition">PrajwalPokhrel</a>
+        <div class="hidden md:flex gap-5 lg:gap-8 items-center">
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="#me">Me</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="#experience">Experience</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="#projects">Projects</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
+                href="blogs.html">Blogs</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+                class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300 cubic-bezier(0.22,1,0.36,1)">
+                Let's Talk
+            </button>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface-variant hover:text-primary">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
         </div>
     </nav>
-
-    <main class="w-full flex-1">
-        
-        <!-- Hero: Massive Typography -->
-        <section class="min-h-[85vh] flex flex-col justify-end px-6 md:px-12 pb-20 pt-20">
-            <h1 class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out font-display font-black text-6xl sm:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter uppercase">
-                <span class="text-[#444] hover:text-white transition-colors duration-500 cursor-default">Developer.</span><br/>
-                <span class="text-[#444] hover:text-white transition-colors duration-500 cursor-default">Engineer.</span>
-            </h1>
-            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-300 ease-out mt-16 flex flex-col md:flex-row gap-12 md:gap-24 items-start md:items-end">
-                <div class="shrink-0 overflow-hidden brutalist-border group">
-                    <img src="prajwal-pokhrel.jpg" class="w-48 h-48 md:w-64 md:h-64 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" alt="Prajwal Pokhrel" />
-                </div>
-                <div class="max-w-2xl group">
-                    <p class="font-sans text-xl md:text-3xl leading-snug text-[#555] group-hover:text-[#e0e0e0] transition-colors duration-700 cursor-default">
-                        I build high performance, aesthetically driven digital experiences specializing in Flutter, React, and Next.js.
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 md:hidden px-6">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-on-surface-variant hover:text-primary"
+            aria-label="Close menu">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="#me" onclick="closeMobileMenu()">Me</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="#experience" onclick="closeMobileMenu()">Experience</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="#projects" onclick="closeMobileMenu()">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
+            href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); closeMobileMenu();"
+            class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300 cubic-bezier(0.22,1,0.36,1)">
+            Let's Talk
+        </button>
+    </div>
+    <main class="relative z-10">
+        <section id="me"
+            class="min-h-[calc(100dvh-5rem)] md:min-h-screen flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-gutter max-w-container-max mx-auto pt-24 md:pt-32 pb-12 md:pb-0 gap-10 md:gap-24">
+            <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+                <div class="space-y-4">
+                    <span
+                        class="font-label-md text-label-md text-primary bg-primary/10 px-3 sm:px-4 py-1 rounded-full border border-primary/20 inline-block text-xs sm:text-label-md">WEB
+                        &amp; MOBILE ARCHITECT</span>
+                    <h1 class="font-display text-4xl sm:text-5xl md:text-display leading-tight">
+                        <span
+                            class="block text-2xl sm:text-3xl md:text-4xl font-headline-md font-semibold text-on-surface mb-2">Prajwal
+                            Pokhrel</span>
+                        Innovating <br /><span class="text-primary">through Code</span>
+                    </h1>
+                    <p class="font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-xl mx-auto md:mx-0">
+                        Web &amp; Mobile Developer specializing in Flutter, React, and Next.js. I build
+                        high-performance, aesthetically driven digital experiences from Nepal.
                     </p>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-6">
+                    <a class="group flex items-center gap-2 text-on-surface-variant hover:text-primary cubic-transition"
+                        href="https://github.com/Prajjwall123" target="_blank" rel="noopener noreferrer"
+                        aria-label="Prajwal Pokhrel on GitHub">
+                        <span class="material-symbols-outlined text-2xl">terminal</span>
+                        <span class="font-label-md text-label-md">GitHub</span>
+                    </a>
+                    <a class="group flex items-center gap-2 text-on-surface-variant hover:text-primary cubic-transition"
+                        href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Prajwal Pokhrel on LinkedIn">
+                        <span class="material-symbols-outlined text-2xl">public</span>
+                        <span class="font-label-md text-label-md">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex-1 flex justify-center items-center w-full max-w-xs sm:max-w-sm md:max-w-none">
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
+                    <div class="absolute inset-0 bg-primary/20 rotate-6 rounded-xl blur-2xl"></div>
+                    <div
+                        class="absolute inset-0 border-2 border-primary/30 -rotate-3 rounded-xl cubic-transition hover:rotate-0">
+                    </div>
+                    <div
+                        class="relative w-full h-full overflow-hidden hero-clip border border-primary/20 bg-surface-container shadow-2xl">
+                        <img alt="Prajwal Pokhrel, Web and Mobile Developer from Nepal"
+                            class="w-full h-full object-cover" src="prajwal-pokhrel.jpg" width="384" height="384"
+                            fetchpriority="high" />
+                    </div>
+                    <div
+                        class="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 bg-surface p-2.5 sm:p-4 border border-primary/20 rounded-xl glass-card flex items-center gap-2 sm:gap-3 animate-bounce max-w-[calc(100%-1rem)]">
+                        <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-primary rounded-full animate-pulse shrink-0"></span>
+                        <span class="font-label-md text-xs sm:text-label-md whitespace-nowrap">Available for
+                            projects</span>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Tech Stack: Infinite Marquee -->
-        <section class="brutalist-border-t py-12 md:py-24 overflow-hidden flex flex-col" id="about">
-            <h2 class="px-6 md:px-12 font-mono text-sm uppercase tracking-widest text-[#888] mb-12">Core Stack</h2>
-            <div class="relative w-full overflow-hidden flex bg-[#111111] py-8 brutalist-border-t brutalist-border-b">
-                <div class="animate-marquee animate-[marquee_20s_linear_infinite] flex gap-16 font-display text-6xl md:text-9xl uppercase tracking-tighter leading-none text-[#333] whitespace-nowrap">
-                    <!-- Duplicate items so it loops seamlessly -->
-                    <span class="hover:text-white transition-colors cursor-default">Flutter</span>
-                    <span class="hover:text-white transition-colors cursor-default stroke-text">React</span>
-                    <span class="hover:text-white transition-colors cursor-default">Next.js</span>
-                    <span class="hover:text-white transition-colors cursor-default stroke-text">Node.js</span>
-                    <span class="hover:text-white transition-colors cursor-default">TypeScript</span>
-                    <span class="hover:text-white transition-colors cursor-default stroke-text">PostgreSQL</span>
-                    <span class="hover:text-white transition-colors cursor-default">Tailwind</span>
-                    <span class="hover:text-white transition-colors cursor-default">Flutter</span>
-                    <span class="hover:text-white transition-colors cursor-default stroke-text">React</span>
-                    <span class="hover:text-white transition-colors cursor-default">Next.js</span>
-                    <span class="hover:text-white transition-colors cursor-default stroke-text">Node.js</span>
-                    <span class="hover:text-white transition-colors cursor-default">TypeScript</span>
-                    <span class="hover:text-white transition-colors cursor-default stroke-text">PostgreSQL</span>
-                    <span class="hover:text-white transition-colors cursor-default">Tailwind</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Works: Full Bleed Brutalism -->
-        <section class="brutalist-border-t" id="work">
-            <div class="px-6 md:px-12 py-12 brutalist-border-b">
-                <h2 class="font-mono text-sm uppercase tracking-widest text-[#888]">Selected Works</h2>
-            </div>
-            
-            <!-- Work 1: Drill -->
-            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out flex flex-col lg:flex-row brutalist-border-b group">
-                <div class="lg:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#222222]">
-                    <div class="font-mono text-xs uppercase tracking-widest text-white mb-6 border border-white px-3 py-1 w-fit">Featured App</div>
-                    <h3 class="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter mb-8 text-[#555] group-hover:text-white transition-colors duration-500">Drill</h3>
-                    <p class="font-sans text-lg md:text-xl text-[#555] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed mb-12">
-                        Gamified Habits and Accountability App. Users pool money in groups, with payouts redistributed algorithmically based on discipline scores.
-                    </p>
-                    <div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest text-[#888] mb-12">
-                        <span>Flutter</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                        <span>Redis</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.drill_habits.app.drill" target="_blank" class="w-fit border border-[#555] group-hover:border-white text-[#888] group-hover:text-white px-8 py-4 font-mono text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
-                        View Application
-                    </a>
-                </div>
-                <div class="lg:w-1/2 bg-[#111111] p-6 md:p-12 lg:p-24 flex items-center justify-center overflow-hidden">
-                    <img src="https://play-lh.googleusercontent.com/DH5Xr5af44vuO5Sq_uPQ7k6SXcNcoaF_7_HXSffqK3Qt35XuYNKxpJss-DgglpBohWVhvFzBCQdNOsFQNilcMg=w832-h470-rw" alt="Drill" class="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
-                </div>
-            </div>
-
-            <!-- Work 2: FutsalFever -->
-            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out flex flex-col lg:flex-row brutalist-border-b group">
-                <div class="lg:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#222222]">
-                    <h3 class="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter mb-8 text-[#555] group-hover:text-white transition-colors duration-500">Futsal<br/>Fever</h3>
-                    <p class="font-sans text-lg md:text-xl text-[#555] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed mb-12">
-                        Java Springboot futsal court booking platform with real-time scheduling.
-                    </p>
-                    <div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest text-[#888] mb-12">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>Web</span>
-                    </div>
-                    <a href="https://github.com/Prajjwall123/FutsalFever" target="_blank" class="w-fit border border-[#555] group-hover:border-white text-[#888] group-hover:text-white px-8 py-4 font-mono text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
-                        Source Code
-                    </a>
-                </div>
-                <div class="lg:w-1/2 bg-[#111111] p-6 md:p-12 lg:p-24 flex items-center justify-center overflow-hidden">
-                    <img src="futsalfever.png" alt="FutsalFever" class="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 brutalist-border group-hover:scale-105" />
-                </div>
-            </div>
-
-            <!-- Work 3: Gradly -->
-            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-200 ease-out flex flex-col lg:flex-row group brutalist-border-b">
-                <div class="lg:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#222222]">
-                    <h3 class="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter mb-8 text-[#555] group-hover:text-white transition-colors duration-500">Gradly</h3>
-                    <p class="font-sans text-lg md:text-xl text-[#555] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed mb-12">
-                        Comprehensive university application platform built with React JS.
-                    </p>
-                    <div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest text-[#888] mb-12">
-                        <span>React JS</span>
-                        <span>Platform</span>
-                    </div>
-                    <a href="https://github.com/Prajjwall123/frontend" target="_blank" class="w-fit border border-[#555] group-hover:border-white text-[#888] group-hover:text-white px-8 py-4 font-mono text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
-                        Source Code
-                    </a>
-                </div>
-                <div class="lg:w-1/2 bg-[#111111] p-6 md:p-12 lg:p-24 flex items-center justify-center overflow-hidden">
-                    <img src="gradly.png" alt="Gradly" class="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 brutalist-border group-hover:scale-105" />
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section class="brutalist-border-b px-6 md:px-12 py-24 lg:py-32">
-            <div class="flex flex-col md:flex-row gap-12 md:gap-24">
-                <h2 class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out md:w-1/4 font-mono text-sm uppercase tracking-widest text-[#888]">Experience</h2>
-                <div class="md:w-3/4 flex flex-col gap-20 md:gap-24">
-                    
-                    <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out flex flex-col md:flex-row gap-6 md:gap-12 items-start group cursor-default">
-                        <div class="font-mono text-xs md:text-sm text-[#444] group-hover:text-[#888] transition-colors duration-500 w-24 shrink-0 mt-2">CURRENT</div>
-                        <div>
-                            <h3 class="font-display text-3xl md:text-5xl uppercase tracking-tighter mb-6 text-[#555] group-hover:text-white transition-colors duration-500">Full Stack Developer</h3>
-                            <p class="font-sans text-lg md:text-xl text-[#444] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed max-w-3xl">
-                                Architecting and delivering comprehensive cross-platform solutions combining scalable mobile applications with robust web backends.
-                            </p>
+        <section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest/50" id="experience">
+            <div class="max-w-container-max mx-auto px-4 md:px-gutter">
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8 md:mb-12">Professional
+                    <span class="text-primary">Path</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-gutter">
+                    <div class="glass-card p-6 md:p-8 rounded-xl space-y-6 group cubic-transition hover:-translate-y-2">
+                        <div class="flex justify-between items-start">
+                            <span class="font-label-md text-label-md text-primary">CURRENT</span>
+                            <span class="font-display text-4xl text-outline-variant opacity-30">01</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md">Mobile Development</h3>
+                        <p class="text-on-surface-variant">Leading design and development in Flutter MVVM architecture
+                            for
+                            fintech projects.</p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Flutter
+                                MVVM</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Kotlin</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">React
+                                Native</span>
                         </div>
                     </div>
-
-                    <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-200 ease-out flex flex-col md:flex-row gap-6 md:gap-12 items-start group cursor-default">
-                        <div class="font-mono text-xs md:text-sm text-[#444] group-hover:text-[#888] transition-colors duration-500 w-24 shrink-0 mt-2">3 MONTHS</div>
-                        <div>
-                            <h3 class="font-display text-3xl md:text-5xl uppercase tracking-tighter mb-6 text-[#555] group-hover:text-white transition-colors duration-500">Software Eng Intern</h3>
-                            <p class="font-sans text-lg md:text-xl text-[#444] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed max-w-3xl">
-                                Built highly scalable internal banking tools, APIs, and dashboards utilizing Python and React.
-                            </p>
+                    <div
+                        class="glass-card p-6 md:p-8 rounded-xl space-y-6 group cubic-transition hover:-translate-y-2 md:translate-y-8">
+                        <div class="flex justify-between items-start">
+                            <span class="font-label-md text-label-md text-primary">2 YEARS</span>
+                            <span class="font-display text-4xl text-outline-variant opacity-30">02</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md">Mobile and Web Developer</h3>
+                        <p class="text-on-surface-variant">Architected web and mobile application</p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Next.js</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">React</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Node.js</span>
                         </div>
                     </div>
-
+                    <div class="glass-card p-6 md:p-8 rounded-xl space-y-6 group cubic-transition hover:-translate-y-2">
+                        <div class="flex justify-between items-start">
+                            <span class="font-label-md text-label-md text-primary">3 months</span>
+                            <span class="font-display text-4xl text-outline-variant opacity-30">03</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md">Internship</h3>
+                        <p class="text-on-surface-variant">Built internal banking systems with Django and React.js</p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">React.js</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">NOde.js</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">PostgresSQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Contact -->
-        <section class="px-6 md:px-12 py-32 md:py-48" id="contact">
-            <h2 class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out font-display font-black text-6xl sm:text-8xl lg:text-[12rem] leading-[0.85] tracking-tighter uppercase text-center mb-12 md:mb-20 text-[#333] hover:text-white transition-colors duration-700 cursor-default">
-                Let's Work.
-            </h2>
-            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-200 ease-out max-w-2xl mx-auto text-center">
-                <a href="mailto:hello@prajwal10.com.np" class="font-sans text-2xl md:text-5xl text-[#555] hover:text-white transition-colors duration-500 border-b-2 border-[#555] hover:border-white pb-2 md:pb-4">
-                    hello@prajwal10.com.np
-                </a>
+        <section class="py-section-gap-mobile md:py-section-gap-desktop" id="projects">
+            <div class="max-w-container-max mx-auto px-4 md:px-gutter">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-16 gap-4">
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Selected <span
+                            class="text-primary">Works</span></h2>
+                    <p class="font-label-md text-label-md text-on-surface-variant max-w-sm md:text-right">Web
+                        Development Projects by
+                        Prajwal Pokhrel
+                        where code meets creativity. Focused on performance and aesthetics.</p>
+                </div>
+                <div class="space-y-6 sm:space-y-8 md:space-y-[15vh] pb-8 md:pb-[10vh]">
+                    <div
+                        class="stack-card bg-surface-container rounded-xl sm:rounded-2xl border border-primary/10 overflow-hidden shadow-2xl glass-card">
+                        <div class="flex flex-col md:flex-row min-h-0 md:min-h-[350px]">
+                            <div class="md:w-3/5 relative overflow-hidden h-48 sm:h-56 md:h-auto">
+                                <img alt="Gradly university application platform built with React JS by Prajwal Pokhrel"
+                                    class="w-full h-full object-cover cubic-transition md:hover:scale-105"
+                                    src="gradly.png" loading="lazy" decoding="async" />
+                            </div>
+                            <div class="md:w-2/5 p-6 md:p-8 flex flex-col justify-center space-y-4">
+                                <div class="space-y-2">
+                                    <span
+                                        class="font-label-md text-label-md text-primary tracking-widest uppercase">REACT
+                                        JS
+                                        • WEB PLATFORM</span>
+                                    <h3 class="font-headline-md text-headline-md">Gradly</h3>
+                                </div>
+                                <p class="text-on-surface-variant font-body-lg">
+                                    A comprehensive university application platform built with React JS. Streamlines the
+                                    application process for aspiring students with an intuitive and responsive user
+                                    interface.
+                                </p>
+                                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
+                                    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition shadow-lg shadow-primary/20 w-full sm:w-auto"
+                                        href="https://youtu.be/BzyDatvRrt4" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">play_circle</span> Demo
+                                    </a>
+                                    <a class="flex items-center justify-center gap-2 border border-secondary text-secondary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:bg-secondary/10 cubic-transition w-full sm:w-auto"
+                                        href="https://github.com/Prajjwall123/frontend" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">code</span> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="stack-card bg-surface-container rounded-xl sm:rounded-2xl border border-primary/10 overflow-hidden shadow-2xl glass-card">
+                        <div class="flex flex-col md:flex-row min-h-0 md:min-h-[350px]">
+                            <div class="md:w-3/5 relative overflow-hidden h-48 sm:h-56 md:h-auto">
+                                <img alt="ProjectsYeti freelance marketplace Flutter mobile app by Prajwal Pokhrel"
+                                    class="w-full h-full object-cover cubic-transition md:hover:scale-105"
+                                    src="projectsyeti.png" loading="lazy" decoding="async" />
+                            </div>
+                            <div class="md:w-2/5 p-6 md:p-8 flex flex-col justify-center space-y-4">
+                                <div class="space-y-2">
+                                    <span
+                                        class="font-label-md text-label-md text-primary tracking-widest uppercase">FLUTTER
+                                        • MOBILE APP</span>
+                                    <h3 class="font-headline-md text-headline-md">ProjectsYeti</h3>
+                                </div>
+                                <p class="text-on-surface-variant font-body-lg">
+                                    A freelance marketplace application utilizing a clean MVVM architecture in Flutter.
+                                    Connects professionals and clients efficiently on both Android and iOS.
+                                </p>
+                                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
+                                    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition shadow-lg shadow-primary/20 w-full sm:w-auto"
+                                        href="https://youtu.be/uIfWCb3cGQs" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">play_circle</span> Demo
+                                    </a>
+                                    <a class="flex items-center justify-center gap-2 border border-secondary text-secondary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:bg-secondary/10 cubic-transition w-full sm:w-auto"
+                                        href="https://github.com/Prajjwall123/projectsyeti" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">code</span> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="stack-card bg-surface-container rounded-xl sm:rounded-2xl border border-primary/10 overflow-hidden shadow-2xl glass-card">
+                        <div class="flex flex-col md:flex-row min-h-0 md:min-h-[350px]">
+                            <div class="md:w-3/5 relative overflow-hidden h-48 sm:h-56 md:h-auto">
+                                <img alt="FutsalFever futsal court booking platform built with Java Spring Boot"
+                                    class="w-full h-full object-cover cubic-transition md:hover:scale-105"
+                                    src="futsalfever.png" loading="lazy" decoding="async" />
+                            </div>
+                            <div class="md:w-2/5 p-6 md:p-8 flex flex-col justify-center space-y-4">
+                                <div class="space-y-2">
+                                    <span
+                                        class="font-label-md text-label-md text-primary tracking-widest uppercase">Java
+                                        Springboot
+                                        • WEB PLATFORM</span>
+                                    <h3 class="font-headline-md text-headline-md">FutsalFever</h3>
+                                </div>
+                                <p class="text-on-surface-variant font-body-lg">
+                                    A fully functional Java Springboot futsal booking platform. Allows users to
+                                    effortlessly
+                                    find, schedule, and book futsal courts with real-time availability.
+                                </p>
+                                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
+                                    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition shadow-lg shadow-primary/20 w-full sm:w-auto"
+                                        href="https://youtu.be/x1YwzzuMtTQ" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">play_circle</span> Demo
+                                    </a>
+                                    <a class="flex items-center justify-center gap-2 border border-secondary text-secondary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:bg-secondary/10 cubic-transition w-full sm:w-auto"
+                                        href="https://github.com/Prajjwall123/FutsalFever" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">code</span> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
+        <section class="py-section-gap-mobile md:py-section-gap-desktop" id="contact">
+            <div class="max-w-container-max mx-auto px-4 md:px-gutter">
+                <div
+                    class="glass-card p-6 sm:p-8 md:p-12 lg:p-20 rounded-xl sm:rounded-2xl flex flex-col md:flex-row gap-8 md:gap-16 items-start emerald-glow">
+                    <div class="flex-1 space-y-6 md:space-y-8 w-full">
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Let's build <br /><span
+                                class="text-primary">the future.</span></h2>
+                        <p class="font-body-lg text-base sm:text-body-lg text-on-surface-variant">Have a vision for a
+                            groundbreaking
+                            app? Let's collaborate and turn your ideas into a digital masterpiece.</p>
+                        <div class="space-y-4">
+                            <a class="group flex flex-wrap items-center gap-2 sm:gap-4 text-primary font-headline-md text-xl sm:text-headline-md break-all"
+                                href="mailto:hello@prajwal10.com.np">
+                                hello@prajwal10.com.np
+                                <span
+                                    class="material-symbols-outlined text-2xl sm:text-3xl group-hover:translate-x-4 cubic-transition shrink-0">north_east</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="flex-1 w-full min-w-0 space-y-5 sm:space-y-6"
+                        action="https://formsubmit.co/pokhrelprajwal29@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New portfolio contact from prajwal10.com.np" />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
+                        <div class="space-y-1">
+                            <label class="font-label-md text-label-md text-on-surface-variant ml-2"
+                                for="contact-name">NAME</label>
+                            <input id="contact-name" name="name" required
+                                class="w-full bg-surface-container border border-primary/20 rounded-lg p-3 sm:p-4 text-base focus:outline-none focus:border-primary cubic-transition"
+                                placeholder="Your Name" type="text" autocomplete="name" />
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label-md text-label-md text-on-surface-variant ml-2"
+                                for="contact-email">EMAIL</label>
+                            <input id="contact-email" name="email" required
+                                class="w-full bg-surface-container border border-primary/20 rounded-lg p-3 sm:p-4 text-base focus:outline-none focus:border-primary cubic-transition"
+                                placeholder="your@email.com" type="email" autocomplete="email" />
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label-md text-label-md text-on-surface-variant ml-2"
+                                for="contact-message">MESSAGE</label>
+                            <textarea id="contact-message" name="message" required
+                                class="w-full bg-surface-container border border-primary/20 rounded-lg p-3 sm:p-4 text-base focus:outline-none focus:border-primary cubic-transition resize-y min-h-[120px]"
+                                placeholder="Tell me about your project..." rows="4"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-4 rounded-lg hover:brightness-110 cubic-transition shadow-lg shadow-primary/20">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="w-full px-6 py-8 md:py-12 flex flex-col md:flex-row justify-between items-center brutalist-border-t text-[#888] font-mono text-xs md:text-sm uppercase tracking-widest gap-6">
-        <div>© 2026 PRAJWAL POKHREL</div>
-        <div class="flex gap-6 md:gap-12">
-            <a href="https://github.com/Prajjwall123" target="_blank" class="hover:text-white transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://www.youtube.com/@suntzu59" target="_blank" class="hover:text-white transition-colors">YouTube</a>
+    <footer class="relative z-10 w-full border-t border-outline-variant bg-surface/80 backdrop-blur-sm">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4 py-8 md:py-gutter px-4 md:px-gutter max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md text-primary">PrajwalPokhrel</div>
+            <div class="text-on-surface-variant font-body-md text-body-md text-center order-last md:order-none">
+                © 2026 PrajwalPokhrel. Built with precision.
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="blogs.html">Blogs</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="https://github.com/Prajjwall123" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="https://www.youtube.com/@suntzu59" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
+                    href="mailto:pokhrelprajwal29@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-12');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    // Stop observing once revealed
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.reveal').forEach((el) => {
-            observer.observe(el);
-        });
-    </script>
+    <script src="particles.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -34,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Syne:wght@600;700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -95,369 +93,223 @@
     }
     </script>
 </head>
-
-<body class="font-body-md text-body-md relative">
-    <div class="particle-bg" aria-hidden="true">
-        <div class="ambient-orb ambient-orb-1"></div>
-        <div class="ambient-orb ambient-orb-2"></div>
-        <div class="ambient-orb ambient-orb-3"></div>
-        <canvas id="particle-canvas"></canvas>
-    </div>
-    <nav
-        class="fixed top-3 md:top-4 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] sm:w-[90%] rounded-full border border-primary/20 backdrop-blur-xl bg-surface/10 z-50 flex justify-between items-center px-3 sm:px-4 md:px-8 py-2.5 md:py-3 max-w-container-max shadow-[0_0_20px_rgba(139,213,185,0.1)] cubic-transition">
-        <a href="index.html"
-            class="font-headline-lg-mobile md:text-headline-md font-bold text-primary truncate min-w-0 text-sm sm:text-base hover:opacity-80 cubic-transition">PrajwalPokhrel</a>
-        <div class="hidden md:flex gap-5 lg:gap-8 items-center">
-            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
-                href="#me">Me</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
-                href="#experience">Experience</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
-                href="#projects">Projects</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all duration-300 border-b-2 border-transparent pb-1"
-                href="blogs.html">Blogs</a>
-        </div>
-        <div class="flex items-center gap-3">
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-                class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300 cubic-bezier(0.22,1,0.36,1)">
-                Let's Talk
-            </button>
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface-variant hover:text-primary">
-                <span class="material-symbols-outlined text-2xl">menu</span>
-            </button>
-        </div>
+<body class="font-body-md text-body-md bg-[#091413] text-[#e0e3e0] antialiased selection:bg-primary/30 min-h-screen flex flex-col">
+    
+    <!-- Minimal Floating Nav -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-6 sm:gap-10 bg-[#111413]/90 backdrop-blur-md border border-white/10 px-8 py-3.5 rounded-full shadow-2xl">
+        <a href="#" class="font-display font-bold text-primary tracking-tight text-xl">PP</a>
+        <div class="h-5 w-px bg-white/20"></div>
+        <a href="#about" class="text-base font-label-md text-on-surface-variant hover:text-white transition-colors">About</a>
+        <a href="#work" class="text-base font-label-md text-on-surface-variant hover:text-white transition-colors">Work</a>
+        <a href="#contact" class="text-base font-label-md text-on-surface-variant hover:text-white transition-colors">Contact</a>
     </nav>
-    <div id="mobile-menu"
-        class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 md:hidden px-6">
-        <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-on-surface-variant hover:text-primary"
-            aria-label="Close menu">
-            <span class="material-symbols-outlined text-3xl">close</span>
-        </button>
-        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
-            href="#me" onclick="closeMobileMenu()">Me</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
-            href="#experience" onclick="closeMobileMenu()">Experience</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
-            href="#projects" onclick="closeMobileMenu()">Projects</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary font-headline-md text-headline-md transition-all duration-300"
-            href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
-        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); closeMobileMenu();"
-            class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300 cubic-bezier(0.22,1,0.36,1)">
-            Let's Talk
-        </button>
-    </div>
-    <main class="relative z-10">
-        <section id="me"
-            class="min-h-[calc(100dvh-5rem)] md:min-h-screen flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-gutter max-w-container-max mx-auto pt-24 md:pt-32 pb-12 md:pb-0 gap-10 md:gap-24">
-            <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
-                <div class="space-y-4">
-                    <span
-                        class="font-label-md text-label-md text-primary bg-primary/10 px-3 sm:px-4 py-1 rounded-full border border-primary/20 inline-block text-xs sm:text-label-md">WEB
-                        &amp; MOBILE ARCHITECT</span>
-                    <h1 class="font-display text-4xl sm:text-5xl md:text-display leading-tight">
-                        <span
-                            class="block text-2xl sm:text-3xl md:text-4xl font-headline-md font-semibold text-on-surface mb-2">Prajwal
-                            Pokhrel</span>
-                        Innovating <br /><span class="text-primary">through Code</span>
+
+    <!-- Wider Container -->
+    <main class="flex-1 w-[95%] max-w-[1600px] mx-auto pt-36 pb-24">
+        
+        <!-- ABOUT GRID (3 Columns) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="about">
+            
+            <!-- Hero Tile (Spans 2 columns) -->
+            <div class="lg:col-span-2 bento-card p-8 lg:p-14 flex flex-col justify-between group">
+                <div>
+                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mb-8 border border-white/10 ring-4 ring-primary/10">
+                        <img src="prajwal-pokhrel.jpg" alt="Prajwal Pokhrel" class="w-full h-full object-cover" />
+                    </div>
+                    <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full font-code-sm text-sm mb-6">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Available for projects
+                    </span>
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-white mb-4 leading-tight tracking-tight">
+                        Innovating <span class="text-primary italic font-light">through Code</span>.
                     </h1>
-                    <p class="font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-xl mx-auto md:mx-0">
-                        Web &amp; Mobile Developer specializing in Flutter, React, and Next.js. I build
-                        high-performance, aesthetically driven digital experiences from Nepal.
-                    </p>
                 </div>
-                <div class="flex items-center justify-center md:justify-start gap-6">
-                    <a class="group flex items-center gap-2 text-on-surface-variant hover:text-primary cubic-transition"
-                        href="https://github.com/Prajjwall123" target="_blank" rel="noopener noreferrer"
-                        aria-label="Prajwal Pokhrel on GitHub">
-                        <span class="material-symbols-outlined text-2xl">terminal</span>
-                        <span class="font-label-md text-label-md">GitHub</span>
+                <p class="text-on-surface-variant text-lg lg:text-xl max-w-2xl mt-10 leading-relaxed">
+                    I'm Prajwal Pokhrel, a Web & Mobile Developer specializing in Flutter, React, and Next.js. I build high performance, aesthetically driven digital experiences.
+                </p>
+            </div>
+
+            <!-- Right side (Tech + Socials Stack) -->
+            <div class="lg:col-span-1 flex flex-col gap-6">
+                <!-- Tech Stack Tile -->
+                <div class="bento-card p-8 lg:p-10 flex-1 flex flex-col justify-center">
+                    <h3 class="text-white font-headline-md text-xl mb-6">Core Stack</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">Flutter</span>
+                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">React</span>
+                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">Next.js</span>
+                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">Node.js</span>
+                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">TypeScript</span>
+                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Socials Tile -->
+                <div class="grid grid-cols-2 gap-6">
+                    <a href="https://github.com/Prajjwall123" target="_blank" class="bento-card aspect-square flex flex-col items-center justify-center p-6 hover:bg-[#161a18] group">
+                        <span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-white transition-colors mb-3">code</span>
+                        <span class="font-label-md text-base text-on-surface-variant group-hover:text-white transition-colors">GitHub</span>
                     </a>
-                    <a class="group flex items-center gap-2 text-on-surface-variant hover:text-primary cubic-transition"
-                        href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank"
-                        rel="noopener noreferrer" aria-label="Prajwal Pokhrel on LinkedIn">
-                        <span class="material-symbols-outlined text-2xl">public</span>
-                        <span class="font-label-md text-label-md">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank" class="bento-card aspect-square flex flex-col items-center justify-center p-6 hover:bg-[#161a18] group">
+                        <span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-white transition-colors mb-3">work</span>
+                        <span class="font-label-md text-base text-on-surface-variant group-hover:text-white transition-colors">LinkedIn</span>
                     </a>
                 </div>
             </div>
-            <div class="relative flex-1 flex justify-center items-center w-full max-w-xs sm:max-w-sm md:max-w-none">
-                <div class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
-                    <div class="absolute inset-0 bg-primary/20 rotate-6 rounded-xl blur-2xl"></div>
-                    <div
-                        class="absolute inset-0 border-2 border-primary/30 -rotate-3 rounded-xl cubic-transition hover:rotate-0">
+
+        </div>
+
+        <div class="mt-16 mb-8 flex items-center justify-between" id="work">
+            <h2 class="font-display text-3xl text-white">Selected Works</h2>
+            <div class="h-px bg-white/10 flex-1 ml-8"></div>
+        </div>
+
+        <!-- Work Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Featured: Drill (Spans full width) -->
+            <div class="lg:col-span-3 bento-card flex flex-col lg:flex-row overflow-hidden group min-h-[500px]">
+                <div class="lg:w-1/2 p-10 lg:p-14 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 z-10 bg-[#0f1311]">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-md font-bold text-xs uppercase tracking-wider border border-primary/20">Featured App</span>
                     </div>
-                    <div
-                        class="relative w-full h-full overflow-hidden hero-clip border border-primary/20 bg-surface-container shadow-2xl">
-                        <img alt="Prajwal Pokhrel, Web and Mobile Developer from Nepal"
-                            class="w-full h-full object-cover" src="prajwal-pokhrel.jpg" width="384" height="384"
-                            fetchpriority="high" />
+                    <h3 class="font-display text-5xl lg:text-6xl text-white mb-4">Drill</h3>
+                    <p class="text-on-surface-variant text-lg lg:text-xl font-body-lg mb-8 leading-relaxed">Gamified Habits and Accountability App. Users pool money in groups, with payouts redistributed algorithmically based on discipline scores.</p>
+                    <ul class="space-y-4 mb-10 text-base text-on-surface-variant">
+                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>Redis caching for challenges.</span></li>
+                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>MFA, CSRF protection, SQLi/XSS prevention.</span></li>
+                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>CI/CD via GitHub Actions to VPS.</span></li>
+                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>Firebase Auth, FCM & AdMob.</span></li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.drill_habits.app.drill" target="_blank" class="inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-xl font-label-md text-lg font-bold hover:bg-gray-200 transition-colors w-fit">
+                        Get it on Play Store
+                    </a>
+                </div>
+                <div class="lg:w-1/2 relative bg-[#151917] flex items-center justify-center overflow-hidden min-h-[400px]">
+                    <img src="https://play-lh.googleusercontent.com/DH5Xr5af44vuO5Sq_uPQ7k6SXcNcoaF_7_HXSffqK3Qt35XuYNKxpJss-DgglpBohWVhvFzBCQdNOsFQNilcMg=w832-h470-rw" alt="Drill App Play Store Feature Graphic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                </div>
+            </div>
+
+            <!-- FutsalFever -->
+            <div class="lg:col-span-2 bento-card group flex flex-col overflow-hidden min-h-[450px]">
+                <div class="h-64 lg:h-[350px] overflow-hidden border-b border-white/5 relative bg-[#1a1f1d]">
+                    <img src="futsalfever.png" alt="FutsalFever" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div class="p-8 lg:p-10 flex flex-col flex-1 bg-[#0f1311]">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-display text-3xl text-white">FutsalFever</h3>
+                        <a href="https://github.com/Prajjwall123/FutsalFever" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">code</span></a>
                     </div>
-                    <div
-                        class="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 bg-surface p-2.5 sm:p-4 border border-primary/20 rounded-xl glass-card flex items-center gap-2 sm:gap-3 animate-bounce max-w-[calc(100%-1rem)]">
-                        <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-primary rounded-full animate-pulse shrink-0"></span>
-                        <span class="font-label-md text-xs sm:text-label-md whitespace-nowrap">Available for
-                            projects</span>
+                    <p class="text-base lg:text-lg text-on-surface-variant mb-6">Java Springboot futsal court booking platform with real-time scheduling.</p>
+                    <div class="mt-auto">
+                        <span class="text-sm font-code-sm text-primary">Java • Spring Boot • Web</span>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest/50" id="experience">
-            <div class="max-w-container-max mx-auto px-4 md:px-gutter">
-                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8 md:mb-12">Professional
-                    <span class="text-primary">Path</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-gutter">
-                    <div class="glass-card p-6 md:p-8 rounded-xl space-y-6 group cubic-transition hover:-translate-y-2">
-                        <div class="flex justify-between items-start">
-                            <span class="font-label-md text-label-md text-primary">CURRENT</span>
-                            <span class="font-display text-4xl text-outline-variant opacity-30">01</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md">Mobile Development</h3>
-                        <p class="text-on-surface-variant">Leading design and development in Flutter MVVM architecture
-                            for
-                            fintech projects.</p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Flutter
-                                MVVM</span>
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Kotlin</span>
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">React
-                                Native</span>
-                        </div>
+
+            <!-- Gradly -->
+            <div class="lg:col-span-1 bento-card group flex flex-col overflow-hidden min-h-[450px]">
+                <div class="h-64 lg:h-[350px] overflow-hidden border-b border-white/5 relative bg-[#1a1f1d]">
+                    <img src="gradly.png" alt="Gradly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+                </div>
+                <div class="p-8 lg:p-10 flex flex-col flex-1 bg-[#0f1311]">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-display text-3xl text-white">Gradly</h3>
+                        <a href="https://github.com/Prajjwall123/frontend" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">code</span></a>
                     </div>
-                    <div
-                        class="glass-card p-6 md:p-8 rounded-xl space-y-6 group cubic-transition hover:-translate-y-2 md:translate-y-8">
-                        <div class="flex justify-between items-start">
-                            <span class="font-label-md text-label-md text-primary">2 YEARS</span>
-                            <span class="font-display text-4xl text-outline-variant opacity-30">02</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md">Mobile and Web Developer</h3>
-                        <p class="text-on-surface-variant">Architected web and mobile application</p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Next.js</span>
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">React</span>
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="glass-card p-6 md:p-8 rounded-xl space-y-6 group cubic-transition hover:-translate-y-2">
-                        <div class="flex justify-between items-start">
-                            <span class="font-label-md text-label-md text-primary">3 months</span>
-                            <span class="font-display text-4xl text-outline-variant opacity-30">03</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md">Internship</h3>
-                        <p class="text-on-surface-variant">Built internal banking systems with Django and React.js</p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">React.js</span>
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">NOde.js</span>
-                            <span
-                                class="px-3 py-1 bg-secondary-container text-primary rounded-full font-code-sm text-code-sm">PostgresSQL</span>
-                        </div>
+                    <p class="text-base lg:text-lg text-on-surface-variant mb-6">Comprehensive university application platform built with React JS.</p>
+                    <div class="mt-auto">
+                        <span class="text-sm font-code-sm text-primary">React JS • Platform</span>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="py-section-gap-mobile md:py-section-gap-desktop" id="projects">
-            <div class="max-w-container-max mx-auto px-4 md:px-gutter">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-16 gap-4">
-                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Selected <span
-                            class="text-primary">Works</span></h2>
-                    <p class="font-label-md text-label-md text-on-surface-variant max-w-sm md:text-right">Web
-                        Development Projects by
-                        Prajwal Pokhrel
-                        where code meets creativity. Focused on performance and aesthetics.</p>
+
+        </div>
+
+        <div class="mt-16 mb-8 flex items-center justify-between" id="experience">
+            <h2 class="font-display text-3xl text-white">Experience</h2>
+            <div class="h-px bg-white/10 flex-1 ml-8"></div>
+        </div>
+
+        <!-- Experience Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bento-card p-10 lg:p-14">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="px-4 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded font-code-sm text-sm tracking-wide">CURRENT</span>
+                    <span class="font-display text-5xl text-white/5">01</span>
                 </div>
-                <div class="space-y-6 sm:space-y-8 md:space-y-[15vh] pb-8 md:pb-[10vh]">
-                    <div
-                        class="stack-card bg-surface-container rounded-xl sm:rounded-2xl border border-primary/10 overflow-hidden shadow-2xl glass-card">
-                        <div class="flex flex-col md:flex-row min-h-0 md:min-h-[350px]">
-                            <div class="md:w-3/5 relative overflow-hidden h-48 sm:h-56 md:h-auto">
-                                <img alt="Gradly university application platform built with React JS by Prajwal Pokhrel"
-                                    class="w-full h-full object-cover cubic-transition md:hover:scale-105"
-                                    src="gradly.png" loading="lazy" decoding="async" />
-                            </div>
-                            <div class="md:w-2/5 p-6 md:p-8 flex flex-col justify-center space-y-4">
-                                <div class="space-y-2">
-                                    <span
-                                        class="font-label-md text-label-md text-primary tracking-widest uppercase">REACT
-                                        JS
-                                        • WEB PLATFORM</span>
-                                    <h3 class="font-headline-md text-headline-md">Gradly</h3>
-                                </div>
-                                <p class="text-on-surface-variant font-body-lg">
-                                    A comprehensive university application platform built with React JS. Streamlines the
-                                    application process for aspiring students with an intuitive and responsive user
-                                    interface.
-                                </p>
-                                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
-                                    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition shadow-lg shadow-primary/20 w-full sm:w-auto"
-                                        href="https://youtu.be/BzyDatvRrt4" target="_blank" rel="noopener noreferrer">
-                                        <span class="material-symbols-outlined">play_circle</span> Demo
-                                    </a>
-                                    <a class="flex items-center justify-center gap-2 border border-secondary text-secondary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:bg-secondary/10 cubic-transition w-full sm:w-auto"
-                                        href="https://github.com/Prajjwall123/frontend" target="_blank"
-                                        rel="noopener noreferrer">
-                                        <span class="material-symbols-outlined">code</span> Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="stack-card bg-surface-container rounded-xl sm:rounded-2xl border border-primary/10 overflow-hidden shadow-2xl glass-card">
-                        <div class="flex flex-col md:flex-row min-h-0 md:min-h-[350px]">
-                            <div class="md:w-3/5 relative overflow-hidden h-48 sm:h-56 md:h-auto">
-                                <img alt="ProjectsYeti freelance marketplace Flutter mobile app by Prajwal Pokhrel"
-                                    class="w-full h-full object-cover cubic-transition md:hover:scale-105"
-                                    src="projectsyeti.png" loading="lazy" decoding="async" />
-                            </div>
-                            <div class="md:w-2/5 p-6 md:p-8 flex flex-col justify-center space-y-4">
-                                <div class="space-y-2">
-                                    <span
-                                        class="font-label-md text-label-md text-primary tracking-widest uppercase">FLUTTER
-                                        • MOBILE APP</span>
-                                    <h3 class="font-headline-md text-headline-md">ProjectsYeti</h3>
-                                </div>
-                                <p class="text-on-surface-variant font-body-lg">
-                                    A freelance marketplace application utilizing a clean MVVM architecture in Flutter.
-                                    Connects professionals and clients efficiently on both Android and iOS.
-                                </p>
-                                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
-                                    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition shadow-lg shadow-primary/20 w-full sm:w-auto"
-                                        href="https://youtu.be/uIfWCb3cGQs" target="_blank" rel="noopener noreferrer">
-                                        <span class="material-symbols-outlined">play_circle</span> Demo
-                                    </a>
-                                    <a class="flex items-center justify-center gap-2 border border-secondary text-secondary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:bg-secondary/10 cubic-transition w-full sm:w-auto"
-                                        href="https://github.com/Prajjwall123/projectsyeti" target="_blank"
-                                        rel="noopener noreferrer">
-                                        <span class="material-symbols-outlined">code</span> Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="stack-card bg-surface-container rounded-xl sm:rounded-2xl border border-primary/10 overflow-hidden shadow-2xl glass-card">
-                        <div class="flex flex-col md:flex-row min-h-0 md:min-h-[350px]">
-                            <div class="md:w-3/5 relative overflow-hidden h-48 sm:h-56 md:h-auto">
-                                <img alt="FutsalFever futsal court booking platform built with Java Spring Boot"
-                                    class="w-full h-full object-cover cubic-transition md:hover:scale-105"
-                                    src="futsalfever.png" loading="lazy" decoding="async" />
-                            </div>
-                            <div class="md:w-2/5 p-6 md:p-8 flex flex-col justify-center space-y-4">
-                                <div class="space-y-2">
-                                    <span
-                                        class="font-label-md text-label-md text-primary tracking-widest uppercase">Java
-                                        Springboot
-                                        • WEB PLATFORM</span>
-                                    <h3 class="font-headline-md text-headline-md">FutsalFever</h3>
-                                </div>
-                                <p class="text-on-surface-variant font-body-lg">
-                                    A fully functional Java Springboot futsal booking platform. Allows users to
-                                    effortlessly
-                                    find, schedule, and book futsal courts with real-time availability.
-                                </p>
-                                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
-                                    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:brightness-110 cubic-transition shadow-lg shadow-primary/20 w-full sm:w-auto"
-                                        href="https://youtu.be/x1YwzzuMtTQ" target="_blank" rel="noopener noreferrer">
-                                        <span class="material-symbols-outlined">play_circle</span> Demo
-                                    </a>
-                                    <a class="flex items-center justify-center gap-2 border border-secondary text-secondary px-6 sm:px-8 py-3 rounded-lg font-label-md hover:bg-secondary/10 cubic-transition w-full sm:w-auto"
-                                        href="https://github.com/Prajjwall123/FutsalFever" target="_blank"
-                                        rel="noopener noreferrer">
-                                        <span class="material-symbols-outlined">code</span> Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h3 class="font-headline-md text-2xl lg:text-3xl text-white mb-4">Full Stack Web & Mobile Development</h3>
+                <p class="text-on-surface-variant text-base lg:text-lg leading-relaxed mb-8">Architecting and delivering comprehensive cross-platform solutions combining scalable mobile applications with robust web backends.</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="text-sm font-code-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">Next.js</span>
+                    <span class="text-sm font-code-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">Flutter</span>
+                    <span class="text-sm font-code-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">Node.js</span>
                 </div>
             </div>
-        </section>
-        <section class="py-section-gap-mobile md:py-section-gap-desktop" id="contact">
-            <div class="max-w-container-max mx-auto px-4 md:px-gutter">
-                <div
-                    class="glass-card p-6 sm:p-8 md:p-12 lg:p-20 rounded-xl sm:rounded-2xl flex flex-col md:flex-row gap-8 md:gap-16 items-start emerald-glow">
-                    <div class="flex-1 space-y-6 md:space-y-8 w-full">
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Let's build <br /><span
-                                class="text-primary">the future.</span></h2>
-                        <p class="font-body-lg text-base sm:text-body-lg text-on-surface-variant">Have a vision for a
-                            groundbreaking
-                            app? Let's collaborate and turn your ideas into a digital masterpiece.</p>
-                        <div class="space-y-4">
-                            <a class="group flex flex-wrap items-center gap-2 sm:gap-4 text-primary font-headline-md text-xl sm:text-headline-md break-all"
-                                href="mailto:hello@prajwal10.com.np">
-                                hello@prajwal10.com.np
-                                <span
-                                    class="material-symbols-outlined text-2xl sm:text-3xl group-hover:translate-x-4 cubic-transition shrink-0">north_east</span>
-                            </a>
-                        </div>
-                    </div>
-                    <form class="flex-1 w-full min-w-0 space-y-5 sm:space-y-6"
-                        action="https://formsubmit.co/pokhrelprajwal29@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New portfolio contact from prajwal10.com.np" />
-                        <input type="hidden" name="_captcha" value="false" />
-                        <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
-                        <div class="space-y-1">
-                            <label class="font-label-md text-label-md text-on-surface-variant ml-2"
-                                for="contact-name">NAME</label>
-                            <input id="contact-name" name="name" required
-                                class="w-full bg-surface-container border border-primary/20 rounded-lg p-3 sm:p-4 text-base focus:outline-none focus:border-primary cubic-transition"
-                                placeholder="Your Name" type="text" autocomplete="name" />
-                        </div>
-                        <div class="space-y-1">
-                            <label class="font-label-md text-label-md text-on-surface-variant ml-2"
-                                for="contact-email">EMAIL</label>
-                            <input id="contact-email" name="email" required
-                                class="w-full bg-surface-container border border-primary/20 rounded-lg p-3 sm:p-4 text-base focus:outline-none focus:border-primary cubic-transition"
-                                placeholder="your@email.com" type="email" autocomplete="email" />
-                        </div>
-                        <div class="space-y-1">
-                            <label class="font-label-md text-label-md text-on-surface-variant ml-2"
-                                for="contact-message">MESSAGE</label>
-                            <textarea id="contact-message" name="message" required
-                                class="w-full bg-surface-container border border-primary/20 rounded-lg p-3 sm:p-4 text-base focus:outline-none focus:border-primary cubic-transition resize-y min-h-[120px]"
-                                placeholder="Tell me about your project..." rows="4"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-4 rounded-lg hover:brightness-110 cubic-transition shadow-lg shadow-primary/20">
-                            Send Message
-                        </button>
-                    </form>
+
+            <div class="bento-card p-10 lg:p-14">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="px-4 py-1.5 bg-white/5 text-white/60 border border-white/10 rounded font-code-sm text-sm tracking-wide">3 MONTHS</span>
+                    <span class="font-display text-5xl text-white/5">02</span>
+                </div>
+                <h3 class="font-headline-md text-2xl lg:text-3xl text-white mb-4">Software Engineering Internship</h3>
+                <p class="text-on-surface-variant text-base lg:text-lg leading-relaxed mb-8">Built highly scalable internal banking tools, APIs, and dashboards utilizing Python and React.</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="text-sm font-code-sm text-white/70 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">React.js</span>
+                    <span class="text-sm font-code-sm text-white/70 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">Node.js</span>
+                    <span class="text-sm font-code-sm text-white/70 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">PostgreSQL</span>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="mt-16 mb-8 flex items-center justify-between" id="contact">
+            <h2 class="font-display text-3xl text-white">Let's Talk</h2>
+            <div class="h-px bg-white/10 flex-1 ml-8"></div>
+        </div>
+
+        <!-- Contact Bento -->
+        <div class="bento-card p-10 lg:p-20 flex flex-col lg:flex-row gap-12 lg:gap-20">
+            <div class="lg:w-1/2">
+                <h2 class="font-display text-5xl lg:text-6xl text-white mb-6">Have an idea? <br/><span class="text-primary italic font-light">Let's build it.</span></h2>
+                <p class="text-on-surface-variant text-lg lg:text-xl mb-10 leading-relaxed">Ready to turn your vision into a digital masterpiece? Send a message and I'll get back to you shortly.</p>
+                <a href="mailto:hello@prajwal10.com.np" class="inline-flex items-center gap-3 text-2xl font-headline-md text-white hover:text-primary transition-colors group">
+                    hello@prajwal10.com.np
+                    <span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">north_east</span>
+                </a>
+            </div>
+            <div class="lg:w-1/2">
+                <form action="https://formsubmit.co/pokhrelprajwal29@gmail.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_subject" value="New portfolio contact from prajwal10.com.np" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+                    
+                    <div>
+                        <input id="contact-name" name="name" required class="w-full bg-[#161a18] border border-white/5 rounded-xl p-5 text-white text-lg focus:outline-none focus:border-primary/50 transition-colors" placeholder="Name" type="text" />
+                    </div>
+                    <div>
+                        <input id="contact-email" name="email" required class="w-full bg-[#161a18] border border-white/5 rounded-xl p-5 text-white text-lg focus:outline-none focus:border-primary/50 transition-colors" placeholder="Email Address" type="email" />
+                    </div>
+                    <div>
+                        <textarea id="contact-message" name="message" required class="w-full bg-[#161a18] border border-white/5 rounded-xl p-5 text-white text-lg focus:outline-none focus:border-primary/50 transition-colors min-h-[160px] resize-y" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-black font-bold font-label-md text-lg py-5 rounded-xl hover:bg-gray-200 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
     </main>
-    <footer class="relative z-10 w-full border-t border-outline-variant bg-surface/80 backdrop-blur-sm">
-        <div
-            class="flex flex-col md:flex-row justify-between items-center gap-4 py-8 md:py-gutter px-4 md:px-gutter max-w-container-max mx-auto">
-            <div class="font-headline-md text-headline-md text-primary">PrajwalPokhrel</div>
-            <div class="text-on-surface-variant font-body-md text-body-md text-center order-last md:order-none">
-                © 2026 PrajwalPokhrel. Built with precision.
-            </div>
-            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
-                    href="blogs.html">Blogs</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
-                    href="https://github.com/Prajjwall123" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
-                    href="https://www.youtube.com/@suntzu59" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
-                    href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md"
-                    href="mailto:pokhrelprajwal29@gmail.com">Email</a>
+
+    <footer class="border-t border-white/5 py-10 mt-10">
+        <div class="w-[95%] max-w-[1600px] mx-auto px-4 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-display font-bold text-white text-lg">PP © 2026</div>
+            <div class="flex gap-8 text-base font-label-md">
+                <a href="https://github.com/Prajjwall123" class="text-on-surface-variant hover:text-white transition-colors" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" class="text-on-surface-variant hover:text-white transition-colors" target="_blank">LinkedIn</a>
+                <a href="https://www.youtube.com/@suntzu59" class="text-on-surface-variant hover:text-white transition-colors" target="_blank">YouTube</a>
             </div>
         </div>
     </footer>
-    <script src="particles.js" defer></script>
-    <script src="script.js" defer></script>
-</body>
 
+</body>
 </html>

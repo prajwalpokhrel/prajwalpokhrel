@@ -8,7 +8,7 @@
         content="Prajwal Pokhrel is a Web &amp; Mobile Developer in Nepal specializing in Flutter, React, Next.js, and full-stack apps. View fintech, marketplace, and platform projects." />
     <meta name="author" content="Prajwal Pokhrel" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#101412" />
+    <meta name="theme-color" content="#050505" />
     <link rel="canonical" href="https://prajwal10.com.np/" />
 
     <meta property="og:type" content="website" />
@@ -32,284 +32,206 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script src="tailwind-config.js?v=4"></script>
-    <link rel="stylesheet" href="styles.css?v=4" />
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": "https://prajwal10.com.np/#website",
-                "url": "https://prajwal10.com.np/",
-                "name": "Prajwal Pokhrel Portfolio",
-                "description": "Portfolio of Prajwal Pokhrel, Web & Mobile Developer specializing in Flutter, React, and Next.js.",
-                "inLanguage": "en"
-            },
-            {
-                "@type": "Person",
-                "@id": "https://prajwal10.com.np/#person",
-                "name": "Prajwal Pokhrel",
-                "alternateName": "PrajwalPokhrel",
-                "url": "https://prajwal10.com.np/",
-                "image": "https://prajwal10.com.np/prajwal-pokhrel.jpg",
-                "jobTitle": "Web & Mobile Developer",
-                "description": "Web and mobile developer building high performance apps with Flutter, React, Next.js, and Node.js.",
-                "email": "hello@prajwal10.com.np",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "NP"
-                },
-                "knowsAbout": [
-                    "Flutter",
-                    "React",
-                    "Next.js",
-                    "Mobile Development",
-                    "Web Development",
-                    "Node.js",
-                    "Kotlin"
-                ],
-                "sameAs": [
-                    "https://github.com/Prajjwall123",
-                    "https://www.linkedin.com/in/prajwal-pokhrel-618863280/",
-                    "https://www.youtube.com/@suntzu59"
-                ]
-            },
-            {
-                "@type": "ProfilePage",
-                "@id": "https://prajwal10.com.np/#profilepage",
-                "url": "https://prajwal10.com.np/",
-                "name": "Prajwal Pokhrel | Web & Mobile Developer Portfolio",
-                "isPartOf": { "@id": "https://prajwal10.com.np/#website" },
-                "about": { "@id": "https://prajwal10.com.np/#person" },
-                "inLanguage": "en"
-            }
-        ]
-    }
-    </script>
+    <script src="tailwind-config.js?v=5"></script>
+    <link rel="stylesheet" href="styles.css?v=5" />
 </head>
-<body class="font-body-md text-body-md bg-[#091413] text-[#e0e3e0] antialiased selection:bg-primary/30 min-h-screen flex flex-col">
-    
-    <!-- Minimal Floating Nav -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-6 sm:gap-10 bg-[#111413]/90 backdrop-blur-md border border-white/10 px-8 py-3.5 rounded-full shadow-2xl">
-        <a href="#" class="font-display font-bold text-primary tracking-tight text-xl">PP</a>
-        <div class="h-5 w-px bg-white/20"></div>
-        <a href="#about" class="text-base font-label-md text-on-surface-variant hover:text-white transition-colors">About</a>
-        <a href="#work" class="text-base font-label-md text-on-surface-variant hover:text-white transition-colors">Work</a>
-        <a href="#contact" class="text-base font-label-md text-on-surface-variant hover:text-white transition-colors">Contact</a>
+<body class="bg-[#050505] text-[#f5f5f5] antialiased selection:bg-white selection:text-black min-h-screen flex flex-col">
+
+    <!-- Minimalist Navbar -->
+    <nav class="w-full px-6 py-6 flex justify-between items-center brutalist-border-b bg-[#050505] sticky top-0 z-50">
+        <div class="font-display font-bold text-xl md:text-2xl tracking-tighter uppercase text-white">Prajwal Pokhrel</div>
+        <div class="hidden sm:flex gap-8 font-mono text-xs md:text-sm uppercase tracking-widest text-[#888]">
+            <a href="#work" class="hover:text-white transition-colors">Work</a>
+            <a href="#about" class="hover:text-white transition-colors">About</a>
+            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
     </nav>
 
-    <!-- Wider Container -->
-    <main class="flex-1 w-[95%] max-w-[1600px] mx-auto pt-36 pb-24">
+    <main class="w-full flex-1">
         
-        <!-- ABOUT GRID (3 Columns) -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="about">
+        <!-- Hero: Massive Typography -->
+        <section class="min-h-[85vh] flex flex-col justify-end px-6 md:px-12 pb-20 pt-20">
+            <h1 class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out font-display font-black text-6xl sm:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter uppercase">
+                <span class="text-[#444] hover:text-white transition-colors duration-500 cursor-default">Developer.</span><br/>
+                <span class="text-[#444] hover:text-white transition-colors duration-500 cursor-default">Engineer.</span>
+            </h1>
+            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-300 ease-out mt-16 flex flex-col md:flex-row gap-12 md:gap-24 items-start md:items-end">
+                <div class="shrink-0 overflow-hidden brutalist-border group">
+                    <img src="prajwal-pokhrel.jpg" class="w-48 h-48 md:w-64 md:h-64 object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" alt="Prajwal Pokhrel" />
+                </div>
+                <div class="max-w-2xl group">
+                    <p class="font-sans text-xl md:text-3xl leading-snug text-[#555] group-hover:text-[#e0e0e0] transition-colors duration-700 cursor-default">
+                        I build high performance, aesthetically driven digital experiences specializing in Flutter, React, and Next.js.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack: Infinite Marquee -->
+        <section class="brutalist-border-t py-12 md:py-24 overflow-hidden flex flex-col" id="about">
+            <h2 class="px-6 md:px-12 font-mono text-sm uppercase tracking-widest text-[#888] mb-12">Core Stack</h2>
+            <div class="relative w-full overflow-hidden flex bg-[#111111] py-8 brutalist-border-t brutalist-border-b">
+                <div class="animate-marquee animate-[marquee_20s_linear_infinite] flex gap-16 font-display text-6xl md:text-9xl uppercase tracking-tighter leading-none text-[#333] whitespace-nowrap">
+                    <!-- Duplicate items so it loops seamlessly -->
+                    <span class="hover:text-white transition-colors cursor-default">Flutter</span>
+                    <span class="hover:text-white transition-colors cursor-default stroke-text">React</span>
+                    <span class="hover:text-white transition-colors cursor-default">Next.js</span>
+                    <span class="hover:text-white transition-colors cursor-default stroke-text">Node.js</span>
+                    <span class="hover:text-white transition-colors cursor-default">TypeScript</span>
+                    <span class="hover:text-white transition-colors cursor-default stroke-text">PostgreSQL</span>
+                    <span class="hover:text-white transition-colors cursor-default">Tailwind</span>
+                    <span class="hover:text-white transition-colors cursor-default">Flutter</span>
+                    <span class="hover:text-white transition-colors cursor-default stroke-text">React</span>
+                    <span class="hover:text-white transition-colors cursor-default">Next.js</span>
+                    <span class="hover:text-white transition-colors cursor-default stroke-text">Node.js</span>
+                    <span class="hover:text-white transition-colors cursor-default">TypeScript</span>
+                    <span class="hover:text-white transition-colors cursor-default stroke-text">PostgreSQL</span>
+                    <span class="hover:text-white transition-colors cursor-default">Tailwind</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works: Full Bleed Brutalism -->
+        <section class="brutalist-border-t" id="work">
+            <div class="px-6 md:px-12 py-12 brutalist-border-b">
+                <h2 class="font-mono text-sm uppercase tracking-widest text-[#888]">Selected Works</h2>
+            </div>
             
-            <!-- Hero Tile (Spans 2 columns) -->
-            <div class="lg:col-span-2 bento-card p-8 lg:p-14 flex flex-col justify-between group">
-                <div>
-                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mb-8 border border-white/10 ring-4 ring-primary/10">
-                        <img src="prajwal-pokhrel.jpg" alt="Prajwal Pokhrel" class="w-full h-full object-cover" />
+            <!-- Work 1: Drill -->
+            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out flex flex-col lg:flex-row brutalist-border-b group">
+                <div class="lg:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#222222]">
+                    <div class="font-mono text-xs uppercase tracking-widest text-white mb-6 border border-white px-3 py-1 w-fit">Featured App</div>
+                    <h3 class="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter mb-8 text-[#555] group-hover:text-white transition-colors duration-500">Drill</h3>
+                    <p class="font-sans text-lg md:text-xl text-[#555] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed mb-12">
+                        Gamified Habits and Accountability App. Users pool money in groups, with payouts redistributed algorithmically based on discipline scores.
+                    </p>
+                    <div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest text-[#888] mb-12">
+                        <span>Flutter</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>Redis</span>
                     </div>
-                    <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full font-code-sm text-sm mb-6">
-                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Available for projects
-                    </span>
-                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-white mb-4 leading-tight tracking-tight">
-                        Innovating <span class="text-primary italic font-light">through Code</span>.
-                    </h1>
-                </div>
-                <p class="text-on-surface-variant text-lg lg:text-xl max-w-2xl mt-10 leading-relaxed">
-                    I'm Prajwal Pokhrel, a Web & Mobile Developer specializing in Flutter, React, and Next.js. I build high performance, aesthetically driven digital experiences.
-                </p>
-            </div>
-
-            <!-- Right side (Tech + Socials Stack) -->
-            <div class="lg:col-span-1 flex flex-col gap-6">
-                <!-- Tech Stack Tile -->
-                <div class="bento-card p-8 lg:p-10 flex-1 flex flex-col justify-center">
-                    <h3 class="text-white font-headline-md text-xl mb-6">Core Stack</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">Flutter</span>
-                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">React</span>
-                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">Next.js</span>
-                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">Node.js</span>
-                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">TypeScript</span>
-                        <span class="px-4 py-2 bg-[#1a1f1d] border border-white/5 rounded-lg font-code-sm text-sm text-primary transition-colors hover:bg-primary/10 hover:border-primary/30">PostgreSQL</span>
-                    </div>
-                </div>
-
-                <!-- Socials Tile -->
-                <div class="grid grid-cols-2 gap-6">
-                    <a href="https://github.com/Prajjwall123" target="_blank" class="bento-card aspect-square flex flex-col items-center justify-center p-6 hover:bg-[#161a18] group">
-                        <span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-white transition-colors mb-3">code</span>
-                        <span class="font-label-md text-base text-on-surface-variant group-hover:text-white transition-colors">GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank" class="bento-card aspect-square flex flex-col items-center justify-center p-6 hover:bg-[#161a18] group">
-                        <span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-white transition-colors mb-3">work</span>
-                        <span class="font-label-md text-base text-on-surface-variant group-hover:text-white transition-colors">LinkedIn</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.drill_habits.app.drill" target="_blank" class="w-fit border border-[#555] group-hover:border-white text-[#888] group-hover:text-white px-8 py-4 font-mono text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
+                        View Application
                     </a>
                 </div>
+                <div class="lg:w-1/2 bg-[#111111] p-6 md:p-12 lg:p-24 flex items-center justify-center overflow-hidden">
+                    <img src="https://play-lh.googleusercontent.com/DH5Xr5af44vuO5Sq_uPQ7k6SXcNcoaF_7_HXSffqK3Qt35XuYNKxpJss-DgglpBohWVhvFzBCQdNOsFQNilcMg=w832-h470-rw" alt="Drill" class="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+                </div>
             </div>
 
-        </div>
-
-        <div class="mt-16 mb-8 flex items-center justify-between" id="work">
-            <h2 class="font-display text-3xl text-white">Selected Works</h2>
-            <div class="h-px bg-white/10 flex-1 ml-8"></div>
-        </div>
-
-        <!-- Work Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            
-            <!-- Featured: Drill (Spans full width) -->
-            <div class="lg:col-span-3 bento-card flex flex-col lg:flex-row overflow-hidden group min-h-[500px]">
-                <div class="lg:w-1/2 p-10 lg:p-14 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 z-10 bg-[#0f1311]">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-md font-bold text-xs uppercase tracking-wider border border-primary/20">Featured App</span>
+            <!-- Work 2: FutsalFever -->
+            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out flex flex-col lg:flex-row brutalist-border-b group">
+                <div class="lg:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#222222]">
+                    <h3 class="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter mb-8 text-[#555] group-hover:text-white transition-colors duration-500">Futsal<br/>Fever</h3>
+                    <p class="font-sans text-lg md:text-xl text-[#555] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed mb-12">
+                        Java Springboot futsal court booking platform with real-time scheduling.
+                    </p>
+                    <div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest text-[#888] mb-12">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Web</span>
                     </div>
-                    <h3 class="font-display text-5xl lg:text-6xl text-white mb-4">Drill</h3>
-                    <p class="text-on-surface-variant text-lg lg:text-xl font-body-lg mb-8 leading-relaxed">Gamified Habits and Accountability App. Users pool money in groups, with payouts redistributed algorithmically based on discipline scores.</p>
-                    <ul class="space-y-4 mb-10 text-base text-on-surface-variant">
-                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>Redis caching for challenges.</span></li>
-                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>MFA, CSRF protection, SQLi/XSS prevention.</span></li>
-                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>CI/CD via GitHub Actions to VPS.</span></li>
-                        <li class="flex gap-3 items-start"><span class="text-primary font-bold mt-0.5">•</span> <span>Firebase Auth, FCM & AdMob.</span></li>
-                    </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.drill_habits.app.drill" target="_blank" class="inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-xl font-label-md text-lg font-bold hover:bg-gray-200 transition-colors w-fit">
-                        Get it on Play Store
+                    <a href="https://github.com/Prajjwall123/FutsalFever" target="_blank" class="w-fit border border-[#555] group-hover:border-white text-[#888] group-hover:text-white px-8 py-4 font-mono text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
+                        Source Code
                     </a>
                 </div>
-                <div class="lg:w-1/2 relative bg-[#151917] flex items-center justify-center overflow-hidden min-h-[400px]">
-                    <img src="https://play-lh.googleusercontent.com/DH5Xr5af44vuO5Sq_uPQ7k6SXcNcoaF_7_HXSffqK3Qt35XuYNKxpJss-DgglpBohWVhvFzBCQdNOsFQNilcMg=w832-h470-rw" alt="Drill App Play Store Feature Graphic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                <div class="lg:w-1/2 bg-[#111111] p-6 md:p-12 lg:p-24 flex items-center justify-center overflow-hidden">
+                    <img src="futsalfever.png" alt="FutsalFever" class="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 brutalist-border group-hover:scale-105" />
                 </div>
             </div>
 
-            <!-- FutsalFever -->
-            <div class="lg:col-span-2 bento-card group flex flex-col overflow-hidden min-h-[450px]">
-                <div class="h-64 lg:h-[350px] overflow-hidden border-b border-white/5 relative bg-[#1a1f1d]">
-                    <img src="futsalfever.png" alt="FutsalFever" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div class="p-8 lg:p-10 flex flex-col flex-1 bg-[#0f1311]">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-display text-3xl text-white">FutsalFever</h3>
-                        <a href="https://github.com/Prajjwall123/FutsalFever" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">code</span></a>
+            <!-- Work 3: Gradly -->
+            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-200 ease-out flex flex-col lg:flex-row group brutalist-border-b">
+                <div class="lg:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#222222]">
+                    <h3 class="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter mb-8 text-[#555] group-hover:text-white transition-colors duration-500">Gradly</h3>
+                    <p class="font-sans text-lg md:text-xl text-[#555] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed mb-12">
+                        Comprehensive university application platform built with React JS.
+                    </p>
+                    <div class="flex flex-wrap gap-4 font-mono text-xs uppercase tracking-widest text-[#888] mb-12">
+                        <span>React JS</span>
+                        <span>Platform</span>
                     </div>
-                    <p class="text-base lg:text-lg text-on-surface-variant mb-6">Java Springboot futsal court booking platform with real-time scheduling.</p>
-                    <div class="mt-auto">
-                        <span class="text-sm font-code-sm text-primary">Java • Spring Boot • Web</span>
+                    <a href="https://github.com/Prajjwall123/frontend" target="_blank" class="w-fit border border-[#555] group-hover:border-white text-[#888] group-hover:text-white px-8 py-4 font-mono text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
+                        Source Code
+                    </a>
+                </div>
+                <div class="lg:w-1/2 bg-[#111111] p-6 md:p-12 lg:p-24 flex items-center justify-center overflow-hidden">
+                    <img src="gradly.png" alt="Gradly" class="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 brutalist-border group-hover:scale-105" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="brutalist-border-b px-6 md:px-12 py-24 lg:py-32">
+            <div class="flex flex-col md:flex-row gap-12 md:gap-24">
+                <h2 class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out md:w-1/4 font-mono text-sm uppercase tracking-widest text-[#888]">Experience</h2>
+                <div class="md:w-3/4 flex flex-col gap-20 md:gap-24">
+                    
+                    <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out flex flex-col md:flex-row gap-6 md:gap-12 items-start group cursor-default">
+                        <div class="font-mono text-xs md:text-sm text-[#444] group-hover:text-[#888] transition-colors duration-500 w-24 shrink-0 mt-2">CURRENT</div>
+                        <div>
+                            <h3 class="font-display text-3xl md:text-5xl uppercase tracking-tighter mb-6 text-[#555] group-hover:text-white transition-colors duration-500">Full Stack Developer</h3>
+                            <p class="font-sans text-lg md:text-xl text-[#444] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed max-w-3xl">
+                                Architecting and delivering comprehensive cross-platform solutions combining scalable mobile applications with robust web backends.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Gradly -->
-            <div class="lg:col-span-1 bento-card group flex flex-col overflow-hidden min-h-[450px]">
-                <div class="h-64 lg:h-[350px] overflow-hidden border-b border-white/5 relative bg-[#1a1f1d]">
-                    <img src="gradly.png" alt="Gradly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
-                </div>
-                <div class="p-8 lg:p-10 flex flex-col flex-1 bg-[#0f1311]">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-display text-3xl text-white">Gradly</h3>
-                        <a href="https://github.com/Prajjwall123/frontend" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">code</span></a>
+                    <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-200 ease-out flex flex-col md:flex-row gap-6 md:gap-12 items-start group cursor-default">
+                        <div class="font-mono text-xs md:text-sm text-[#444] group-hover:text-[#888] transition-colors duration-500 w-24 shrink-0 mt-2">3 MONTHS</div>
+                        <div>
+                            <h3 class="font-display text-3xl md:text-5xl uppercase tracking-tighter mb-6 text-[#555] group-hover:text-white transition-colors duration-500">Software Eng Intern</h3>
+                            <p class="font-sans text-lg md:text-xl text-[#444] group-hover:text-[#a3a3a3] transition-colors duration-500 leading-relaxed max-w-3xl">
+                                Built highly scalable internal banking tools, APIs, and dashboards utilizing Python and React.
+                            </p>
+                        </div>
                     </div>
-                    <p class="text-base lg:text-lg text-on-surface-variant mb-6">Comprehensive university application platform built with React JS.</p>
-                    <div class="mt-auto">
-                        <span class="text-sm font-code-sm text-primary">React JS • Platform</span>
-                    </div>
+
                 </div>
             </div>
+        </section>
 
-        </div>
-
-        <div class="mt-16 mb-8 flex items-center justify-between" id="experience">
-            <h2 class="font-display text-3xl text-white">Experience</h2>
-            <div class="h-px bg-white/10 flex-1 ml-8"></div>
-        </div>
-
-        <!-- Experience Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bento-card p-10 lg:p-14">
-                <div class="flex justify-between items-start mb-8">
-                    <span class="px-4 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded font-code-sm text-sm tracking-wide">CURRENT</span>
-                    <span class="font-display text-5xl text-white/5">01</span>
-                </div>
-                <h3 class="font-headline-md text-2xl lg:text-3xl text-white mb-4">Full Stack Web & Mobile Development</h3>
-                <p class="text-on-surface-variant text-base lg:text-lg leading-relaxed mb-8">Architecting and delivering comprehensive cross-platform solutions combining scalable mobile applications with robust web backends.</p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="text-sm font-code-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">Next.js</span>
-                    <span class="text-sm font-code-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">Flutter</span>
-                    <span class="text-sm font-code-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">Node.js</span>
-                </div>
-            </div>
-
-            <div class="bento-card p-10 lg:p-14">
-                <div class="flex justify-between items-start mb-8">
-                    <span class="px-4 py-1.5 bg-white/5 text-white/60 border border-white/10 rounded font-code-sm text-sm tracking-wide">3 MONTHS</span>
-                    <span class="font-display text-5xl text-white/5">02</span>
-                </div>
-                <h3 class="font-headline-md text-2xl lg:text-3xl text-white mb-4">Software Engineering Internship</h3>
-                <p class="text-on-surface-variant text-base lg:text-lg leading-relaxed mb-8">Built highly scalable internal banking tools, APIs, and dashboards utilizing Python and React.</p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="text-sm font-code-sm text-white/70 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">React.js</span>
-                    <span class="text-sm font-code-sm text-white/70 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">Node.js</span>
-                    <span class="text-sm font-code-sm text-white/70 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">PostgreSQL</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-16 mb-8 flex items-center justify-between" id="contact">
-            <h2 class="font-display text-3xl text-white">Let's Talk</h2>
-            <div class="h-px bg-white/10 flex-1 ml-8"></div>
-        </div>
-
-        <!-- Contact Bento -->
-        <div class="bento-card p-10 lg:p-20 flex flex-col lg:flex-row gap-12 lg:gap-20">
-            <div class="lg:w-1/2">
-                <h2 class="font-display text-5xl lg:text-6xl text-white mb-6">Have an idea? <br/><span class="text-primary italic font-light">Let's build it.</span></h2>
-                <p class="text-on-surface-variant text-lg lg:text-xl mb-10 leading-relaxed">Ready to turn your vision into a digital masterpiece? Send a message and I'll get back to you shortly.</p>
-                <a href="mailto:hello@prajwal10.com.np" class="inline-flex items-center gap-3 text-2xl font-headline-md text-white hover:text-primary transition-colors group">
+        <!-- Contact -->
+        <section class="px-6 md:px-12 py-32 md:py-48" id="contact">
+            <h2 class="reveal opacity-0 translate-y-12 transition-all duration-1000 ease-out font-display font-black text-6xl sm:text-8xl lg:text-[12rem] leading-[0.85] tracking-tighter uppercase text-center mb-12 md:mb-20 text-[#333] hover:text-white transition-colors duration-700 cursor-default">
+                Let's Work.
+            </h2>
+            <div class="reveal opacity-0 translate-y-12 transition-all duration-1000 delay-200 ease-out max-w-2xl mx-auto text-center">
+                <a href="mailto:hello@prajwal10.com.np" class="font-sans text-2xl md:text-5xl text-[#555] hover:text-white transition-colors duration-500 border-b-2 border-[#555] hover:border-white pb-2 md:pb-4">
                     hello@prajwal10.com.np
-                    <span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">north_east</span>
                 </a>
             </div>
-            <div class="lg:w-1/2">
-                <form action="https://formsubmit.co/pokhrelprajwal29@gmail.com" method="POST" class="space-y-6">
-                    <input type="hidden" name="_subject" value="New portfolio contact from prajwal10.com.np" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
-                    
-                    <div>
-                        <input id="contact-name" name="name" required class="w-full bg-[#161a18] border border-white/5 rounded-xl p-5 text-white text-lg focus:outline-none focus:border-primary/50 transition-colors" placeholder="Name" type="text" />
-                    </div>
-                    <div>
-                        <input id="contact-email" name="email" required class="w-full bg-[#161a18] border border-white/5 rounded-xl p-5 text-white text-lg focus:outline-none focus:border-primary/50 transition-colors" placeholder="Email Address" type="email" />
-                    </div>
-                    <div>
-                        <textarea id="contact-message" name="message" required class="w-full bg-[#161a18] border border-white/5 rounded-xl p-5 text-white text-lg focus:outline-none focus:border-primary/50 transition-colors min-h-[160px] resize-y" placeholder="Your message..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-white text-black font-bold font-label-md text-lg py-5 rounded-xl hover:bg-gray-200 transition-colors">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
+        </section>
 
     </main>
 
-    <footer class="border-t border-white/5 py-10 mt-10">
-        <div class="w-[95%] max-w-[1600px] mx-auto px-4 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="font-display font-bold text-white text-lg">PP © 2026</div>
-            <div class="flex gap-8 text-base font-label-md">
-                <a href="https://github.com/Prajjwall123" class="text-on-surface-variant hover:text-white transition-colors" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" class="text-on-surface-variant hover:text-white transition-colors" target="_blank">LinkedIn</a>
-                <a href="https://www.youtube.com/@suntzu59" class="text-on-surface-variant hover:text-white transition-colors" target="_blank">YouTube</a>
-            </div>
+    <!-- Footer -->
+    <footer class="w-full px-6 py-8 md:py-12 flex flex-col md:flex-row justify-between items-center brutalist-border-t text-[#888] font-mono text-xs md:text-sm uppercase tracking-widest gap-6">
+        <div>© 2026 PRAJWAL POKHREL</div>
+        <div class="flex gap-6 md:gap-12">
+            <a href="https://github.com/Prajjwall123" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/prajwal-pokhrel-618863280/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://www.youtube.com/@suntzu59" target="_blank" class="hover:text-white transition-colors">YouTube</a>
         </div>
     </footer>
-
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-12');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    // Stop observing once revealed
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

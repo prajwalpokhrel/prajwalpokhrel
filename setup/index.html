@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Guide</title>
+
+    <style>
+        body {
+            font-family: Consolas, "Courier New", monospace;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        pre {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <pre><code>
+        npm init -y
+        npm install express
+        npm install -D typescript tsx ts-node nodemon @types/express @types/node
+        npx tsc --init
+
+
+
+
+        
+        {
+        "compilerOptions": {
+            "rootDir": "./src",
+            "outDir": "./dist",
+            "module": "nodenext",
+            "target": "esnext",
+            "strict": true,
+            "skipLibCheck": true
+        },
+        "include": [
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "node_modules"
+        ]
+        }
+
+
+
+
+
+        {
+        "watch": ["src"],
+        "ignore": ["src/**/*.spec.ts"],
+        "ext": "ts, html, css, ejs, json",
+        "exec": "tsx ./src/index.ts"
+        }
+
+</code></pre>
+
+</body>
+
+</html>
